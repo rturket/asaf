@@ -1,11 +1,13 @@
-/* ASAF (@asaf.gv) - Estilos Personalizados do Protótipo */
+/* ASAF (@asaf.gv) - Identidade Visual Oficial inspirada no Brasão da ASAF */
 
 :root {
-  --rescue-red: #dc2626;
-  --rescue-red-dark: #991b1b;
-  --alert-yellow: #facc15;
-  --ocean-dark: #071120;
-  --ocean-mid: #0f223d;
+  --asaf-navy: #0c2346;
+  --asaf-navy-deep: #061326;
+  --asaf-blue: #0d85d8;
+  --asaf-red: #e61919;
+  --asaf-red-dark: #a80f0f;
+  --asaf-gold: #f7d117;
+  --asaf-sand: #facc15;
 }
 
 html {
@@ -14,41 +16,64 @@ html {
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background-color: #071120;
+  background-color: var(--asaf-navy-deep);
   color: #f8fafc;
 }
 
 .font-display {
   font-family: 'Oswald', 'Inter', sans-serif;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
 }
 
-/* Padrão diagonal de faixa de salvamento */
+.font-emblem {
+  font-family: 'Alfa Slab One', 'Oswald', serif;
+  letter-spacing: 0.04em;
+}
+
+/* Padrão diagonal de faixa de salvamento nas cores do brasão ASAF */
 .rescue-stripes {
   background: repeating-linear-gradient(
     -45deg,
-    #dc2626,
-    #dc2626 14px,
-    #facc15 14px,
-    #facc15 28px
+    var(--asaf-red),
+    var(--asaf-red) 14px,
+    var(--asaf-gold) 14px,
+    var(--asaf-gold) 28px
   );
 }
 
-/* Gradiente hero oceano + resgate */
+/* Fundo Hero inspirado no Azul Marítimo Oficial da ASAF (#103260) e no Brasão */
 .hero-bg {
   background:
-    radial-gradient(circle at 85% 20%, rgba(220, 38, 38, 0.28) 0%, transparent 45%),
-    radial-gradient(circle at 15% 80%, rgba(250, 204, 21, 0.14) 0%, transparent 45%),
-    linear-gradient(180deg, #071120 0%, #0b192e 60%, #071120 100%);
+    radial-gradient(circle at 82% 24%, rgba(230, 25, 25, 0.28) 0%, transparent 42%),
+    radial-gradient(circle at 18% 30%, rgba(13, 133, 216, 0.25) 0%, transparent 48%),
+    radial-gradient(circle at 50% 90%, rgba(247, 209, 23, 0.12) 0%, transparent 50%),
+    linear-gradient(180deg, #091d3a 0%, #103260 52%, #061326 100%);
+}
+
+/* Efeito de brilho e destaque para o Brasão Oficial da ASAF */
+.asaf-logo-glow {
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.65)) drop-shadow(0 0 18px rgba(247, 209, 23, 0.22));
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+}
+
+.asaf-logo-glow:hover {
+  transform: scale(1.04) rotate(-1deg);
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.75)) drop-shadow(0 0 26px rgba(247, 209, 23, 0.4));
+}
+
+/* Borda estilo xilogravura/brasão ASAF */
+.asaf-card-border {
+  border: 2px solid rgba(247, 209, 23, 0.35);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
 }
 
 /* Animação de pulso nos marcadores de praia */
 @keyframes pulse-red {
   0%, 100% {
-    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+    box-shadow: 0 0 0 0 rgba(230, 25, 25, 0.75);
   }
   50% {
-    box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+    box-shadow: 0 0 0 10px rgba(230, 25, 25, 0);
   }
 }
 
