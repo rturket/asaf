@@ -6,7 +6,7 @@ const state = {
   seasonMode: 'inverno', // 'inverno' | 'verao' | 'proposta'
   totalSignatures: 6412,
   goalSignatures: 15000,
-  municipalitiesCount: 24, // Lei Estadual 16.585/2015 exige min. 20 municípios
+  municipalitiesCount: 24,
   pendingSignature: null,
   lastConfirmedSignature: {
     name: 'Lucas Martins Silveira',
@@ -20,7 +20,6 @@ const state = {
     hash: '8f4b2e9c1a7d3056f89c0e1d4a7b2c6e9f1a3b5d7e9f0c2a4b6d8e0f1a2b3c4d',
     protocol: 'ASAF-SC-2026-006412'
   },
-  // Mural público exibe APENAS INICIAIS para proteger os cidadãos e GVs contra exposição
   supporters: [
     { initials: 'G. R. C.', location: 'Campeche, Florianópolis/SC', profile: 'Guarda-Vidas Civil (GVC)', time: 'há 2 min' },
     { initials: 'M. T. L.', location: 'Centro, Balneário Camboriú/SC', profile: 'Banhista / Moradora', time: 'há 4 min' },
@@ -31,15 +30,14 @@ const state = {
     { initials: 'B. L. K.', location: 'Guarda do Embaú, Palhoça/SC', profile: 'Guarda-Vidas Civil (GVC)', time: 'há 24 min' },
     { initials: 'T. N. D.', location: 'Prainha, São Francisco do Sul/SC', profile: 'Banhista / Surfista', time: 'há 29 min' }
   ],
-  // Relatos de falta de GVC / problemas em praias enviados por Banhistas e GVCs
   reports: [
     {
       id: 'rep-1',
       beach: 'Praia do Moçambique / Barra da Lagoa (Florianópolis/SC)',
-      category: 'Falta de GVC / Posto com Bandeira Preta',
+      category: 'Corrente de Retorno Sem Sinalização (Sem GVC)',
       date: 'Outubro/2026',
-      description: 'Sol forte, praia cheia de famílias e surfistas, correntes de retorno ativas e posto fechado com bandeira preta.',
-      author: 'Indicado por Banhista (Iniciais: F. M. R.)'
+      description: 'Sol forte, praia cheia de famílias e surfistas, valas e correntes de retorno fortíssimas sem nenhum GVC para fincar a bandeira vermelha e prevenir afogamentos.',
+      author: 'F. M. R. • Banhista'
     },
     {
       id: 'rep-2',
@@ -47,7 +45,7 @@ const state = {
       category: 'Jornada Exaustiva & Diária Defasada',
       date: 'Operação Verão SC',
       description: 'Turnos de 9h a 12h sem vínculo trabalhista formal (Lei Estadual 13.880/2006), sem FGTS, férias ou 13º salário.',
-      author: 'Relato Protegido GVC (Iniciais: C. F. O.)'
+      author: 'C. F. O. • GVC'
     },
     {
       id: 'rep-3',
@@ -55,32 +53,31 @@ const state = {
       category: 'Praia Desguarnecida Fora de Temporada',
       date: 'Outubro/2026',
       description: 'Finais de semana de primavera com centenas de turistas e surfistas na água sem cobertura de guarda-vidas nos postos.',
-      author: 'Indicado por Banhista (Iniciais: R. V. N.)'
+      author: 'R. V. N. • Morador'
     }
   ],
-  // Dúvidas de Banhistas respondidas pelos GVCs
   questions: [
     {
       id: 'q-1',
-      batherInitials: 'A. P. S. (Banhista — Florianópolis/SC)',
+      batherInitials: 'A. P. S. (Florianópolis/SC)',
       beach: 'Praia do Campeche / Joaquina',
-      question: 'Como identificar uma corrente de retorno quando o posto está fechado fora de temporada e o que fazer se for puxado?',
-      answer: 'A corrente de retorno geralmente aparece como uma faixa de água mais escura, com menos espuma quebrando e ondulação mais agitada voltando para o mar aberto. Se entrar em uma, NUNCA nade contra a correnteza em direção à areia: nade paralelamente à praia (para os lados, onde as ondas quebram com espuma branca) ou flutue acenando o braço para pedir socorro e acione o 193.',
-      answeredBy: 'Respondido por GVC Verificado (Iniciais: G. R. C.)',
+      question: 'Por que a Bandeira Vermelha fincada na areia pelo Guarda-Vidas é tão importante e como identificar a maré de retorno?',
+      answer: 'A Bandeira Vermelha na beira d’água indica exatamente onde está puxando a Corrente de Retorno (maré de retorno) — um canal profundo que leva a água de volta para o mar aberto e causa mais de 85% dos afogamentos. Quando há Guarda-Vidas na praia, nós monitoramos o mar o dia todo e reposicionamos a Bandeira Vermelha conforme a maré muda. Se cair numa corrente de retorno, nade paralelamente à areia (para os lados) e nunca contra a correnteza.',
+      answeredBy: 'GVC G. R. C.',
       status: 'answered'
     },
     {
       id: 'q-2',
-      batherInitials: 'D. L. M. (Banhista — Joinville/SC)',
+      batherInitials: 'D. L. M. (Joinville/SC)',
       beach: 'Praia dos Ingleses / Santinho',
-      question: 'O que significa a Bandeira Preta hasteada na casinha do salva-vidas?',
-      answer: 'A Bandeira Preta no posto significa que aquele Posto de Guarda-Vidas está DESATIVADO / SEM GUARDA-VIDAS operando no local. É justamente o que denunciamos na maioria das praias fora da alta temporada.',
-      answeredBy: 'Respondido por GVC Verificado (Iniciais: L. M. S.)',
+      question: 'Qual a diferença entre a Bandeira Vermelha na areia e a Bandeira Preta na casinha do posto?',
+      answer: 'A Bandeira Vermelha fincada na faixa de areia é o sinal operacional do GVC alertando sobre o ponto exato da Corrente de Retorno (perigo de afogamento). Já a Bandeira Preta no mastro do posto significa que o posto está fechado/desativado — ou seja, não há nenhum Guarda-Vidas trabalhando ali para sinalizar as correntes ou fazer resgates.',
+      answeredBy: 'GVC L. M. S.',
       status: 'answered'
     },
     {
       id: 'q-3',
-      batherInitials: 'K. S. B. (Banhista — Palhoça/SC)',
+      batherInitials: 'K. S. B. (Palhoça/SC)',
       beach: 'Guarda do Embaú / Pinheira',
       question: 'Nos feriados de novembro os postos do Sul da Ilha e Palhoça já terão guarda-vidas trabalhando o dia todo?',
       answer: '',
@@ -88,14 +85,13 @@ const state = {
       status: 'pending'
     }
   ],
-  // Mural Interno exclusivo dos GVCs e Admins (com suporte a Soft Delete pelo Admin)
   muralPosts: [
     {
       id: 'm-1',
       author: 'Diretoria ASAF (Admin)',
       badge: 'Comunicado Oficial',
       time: 'Hoje, 08:30',
-      content: 'Convocamos todos os GVCs de Florianópolis, Litoral Norte e Litoral Sul para mobilização conjunta na ALESC. Já passamos de 24 municípios catarinenses assinando em asafgv.com!',
+      content: 'Convocamos todos os GVCs de Florianópolis, Litoral Norte e Litoral Sul para mobilização conjunta na ALESC. Já passamos de 24 municípios catarinenses apoiando em asafgv.com!',
       isDeleted: false,
       deletedInfo: null
     },
@@ -104,7 +100,7 @@ const state = {
       author: 'GVC R. M. (Posto Mole / Joaquina)',
       badge: 'Operacional',
       time: 'Ontem, 19:15',
-      content: 'Pessoal, estamos levantando fotos atualizadas das condições estruturais dos cadeirões e falta de EPIs em cada praia antes do início da escala de verão. Subam os relatos pela aba do GVC.',
+      content: 'Pessoal, estamos levantando fotos atualizadas das condições estruturais dos cadeirões, bandeiras de sinalização de corrente de retorno e EPIs em cada praia antes do início da escala.',
       isDeleted: false,
       deletedInfo: null
     },
@@ -127,33 +123,31 @@ const state = {
       deletedInfo: 'Soft Delete por Admin em 29/10/2026 15:02 (Mantido no banco p/ auditoria)'
     }
   ],
-  // Agenda de Horários e Compromissos (Gerenciada pelo Admin, Visualizada pelo GVC)
   agendaSlots: [
     { id: 'ag-1', date: '04/11/2026 (Quarta)', time: '14:00 - 16:30', title: 'Audiência Pública ALESC — Pauta Estadual dos GVCs', location: 'Plenário / Comissões ALESC (Florianópolis)', type: 'Mobilização ALESC' },
     { id: 'ag-2', date: '07/11/2026 (Sábado)', time: '09:00 - 11:30', title: 'Assembleia Geral ASAF + Treino Integrado no Mar', location: 'Praia da Joaquina (Posto Central)', type: 'Assembleia & Treino' },
     { id: 'ag-3', date: '10/11/2026 (Terça)', time: '19:30 - 21:00', title: 'Plantão Jurídico Online ASAF (Dúvidas sobre Recertificação e Direitos)', location: 'Videoconferência Exclusiva GVC (Link no Mural)', type: 'Plantão Jurídico' }
   ],
-  // Engine de Notícias e Publicações (Públicas e Internas GVC)
   newsArticles: [
     {
       id: 'news-1',
-      title: 'ASAF lança portal estadual asafgv.com para unificar petição por Guarda-Vidas o ano inteiro em SC',
-      category: 'Mobilização Estadual',
+      title: 'Bandeira Vermelha na areia: como o Guarda-Vidas lê a maré de retorno e evita tragédias silenciosas',
+      category: 'Prevenção & Salvamento',
       visibility: 'PUBLIC',
       date: '30 Out 2026',
-      summary: 'Com proteção total por iniciais (LGPD) e validação criptográfica de CPF, abaixo-assinado reúne moradores, surfistas, bombeiros e guarda-vidas civis de mais de 20 municípios catarinenses.'
+      summary: 'Mais de 85% dos resgates no litoral catarinense ocorrem em correntes de retorno. Sem guarda-vidas o ano inteiro para sinalizar a areia com a bandeira vermelha, banhistas entram no perigo sem perceber.'
     },
     {
       id: 'news-2',
-      title: 'Alerta de Primavera: Calor lota praias catarinenses, mas mais de 90% dos postos seguem fechados',
-      category: 'Segurança nas Praias',
+      title: 'ASAF lança portal estadual asafgv.com unificando assinatura pela valorização dos Guarda-Vidas em SC',
+      category: 'Mobilização Estadual',
       visibility: 'PUBLIC',
-      date: '28 Out 2026',
-      summary: 'Levantamento da @asaf.gv mostra bandeira preta na grande maioria dos postos de salvamento fora da alta temporada e reforça urgência de efetivo permanente.'
+      date: '29 Out 2026',
+      summary: 'Abaixo-assinado auditado reúne moradores, surfistas, bombeiros e guarda-vidas civis de mais de 24 municípios catarinenses pelas 5 pautas da categoria.'
     },
     {
       id: 'news-3',
-      title: '[Restrito GVC] Nota Técnica Jurídica sobre a Lei Estadual nº 13.880/2006 e o plano de transição',
+      title: '[Interno GVC] Nota Técnica Jurídica sobre a Lei Estadual nº 13.880/2006 e o plano de carreira',
       category: 'Boletim Interno GVC',
       visibility: 'INTERNAL_GVC',
       date: '27 Out 2026',
@@ -162,19 +156,17 @@ const state = {
   ]
 };
 
-// Dados das Praias (Florianópolis + Litoral de SC)
 const beachesData = [
-  { name: 'Praia dos Ingleses', region: 'Florianópolis (Norte)', inverno: 'ativo', verao: 'ativo', risk: 'Alto fluxo anual e correntes', postsSummer: '6 postos', postsWinter: '1 posto fixo' },
-  { name: 'Santinho & Moçambique', region: 'Florianópolis (Norte/Leste)', inverno: 'fechado', verao: 'ativo', risk: 'Mar pesado, buracos e costão', postsSummer: '4 postos', postsWinter: '0 (Bandeira Preta)' },
-  { name: 'Praia Brava & Canasvieiras', region: 'Florianópolis (Norte)', inverno: 'fechado', verao: 'ativo', risk: 'Repuxo intenso e turismo anual', postsSummer: '10 postos', postsWinter: '0 (Bandeira Preta)' },
-  { name: 'Praia Mole & Joaquina', region: 'Florianópolis (Leste)', inverno: 'ativo', verao: 'ativo', risk: 'Mar de tombo, surfe e costão', postsSummer: '4 postos', postsWinter: 'Posto central ativo' },
-  { name: 'Campeche & Morro das Pedras', region: 'Florianópolis (Sul)', inverno: 'fechado', verao: 'ativo', risk: 'Extensa faixa de areia e valas fortes', postsSummer: '6 postos', postsWinter: 'Desprotegida / Parcial' },
-  { name: 'Armação, Matadeiro e Açores', region: 'Florianópolis (Sul)', inverno: 'fechado', verao: 'ativo', risk: 'Correntes de retorno severas', postsSummer: '6 postos', postsWinter: '0 (Bandeira Preta)' },
-  { name: 'Guarda do Embaú & Pinheira', region: 'Palhoça (Grande Floripa)', inverno: 'fechado', verao: 'ativo', risk: 'Travessia de rio e mar aberto', postsSummer: '4 postos', postsWinter: '0 (Bandeira Preta)' },
-  { name: 'Ferrugem, Rosa e Silveira', region: 'Garopaba / Imbituba (Sul SC)', inverno: 'fechado', verao: 'ativo', risk: 'Altíssimo fluxo de surfistas o ano todo', postsSummer: '6 postos', postsWinter: '0 (Bandeira Preta)' }
+  { name: 'Praia dos Ingleses', region: 'Florianópolis (Norte)', inverno: 'ativo', verao: 'ativo', risk: 'Correntes de retorno móveis e alto fluxo', postsSummer: '6 postos ativos', postsWinter: '1 posto fixo' },
+  { name: 'Santinho & Moçambique', region: 'Florianópolis (Norte/Leste)', inverno: 'fechado', verao: 'ativo', risk: 'Mar aberto, valas profundas e maré de retorno forte', postsSummer: '4 postos ativos', postsWinter: 'Sem GVC / Sem Bandeira Vermelha na areia' },
+  { name: 'Praia Brava & Canasvieiras', region: 'Florianópolis (Norte)', inverno: 'fechado', verao: 'ativo', risk: 'Repuxo intenso e correntes laterais', postsSummer: '10 postos ativos', postsWinter: 'Sem GVC / Sem sinalização de corrente' },
+  { name: 'Praia Mole & Joaquina', region: 'Florianópolis (Leste)', inverno: 'ativo', verao: 'ativo', risk: 'Mar de tombo e corrente de costão severa', postsSummer: '4 postos ativos', postsWinter: 'Posto central ativo' },
+  { name: 'Campeche & Morro das Pedras', region: 'Florianópolis (Sul)', inverno: 'fechado', verao: 'ativo', risk: 'Bancos de areia móveis e maré de retorno constante', postsSummer: '6 postos ativos', postsWinter: 'Desprotegida na maior parte da orla' },
+  { name: 'Armação, Matadeiro e Açores', region: 'Florianópolis (Sul)', inverno: 'fechado', verao: 'ativo', risk: 'Corrente de retorno fixa junto ao costão e ilha', postsSummer: '6 postos ativos', postsWinter: 'Sem GVC / Sem sinalização na areia' },
+  { name: 'Guarda do Embaú & Pinheira', region: 'Palhoça (Grande Floripa)', inverno: 'fechado', verao: 'ativo', risk: 'Correnteza de canal do rio e mar aberto', postsSummer: '4 postos ativos', postsWinter: 'Sem GVC fora de temporada' },
+  { name: 'Ferrugem, Rosa e Silveira', region: 'Garopaba / Imbituba (Sul SC)', inverno: 'fechado', verao: 'ativo', risk: 'Correntes de costão e alto fluxo o ano todo', postsSummer: '6 postos ativos', postsWinter: 'Sem GVC fora de temporada' }
 ];
 
-// Extrai apenas as iniciais de um nome completo (ex: "Rafael Turket Silva" -> "R. T. S.")
 function extrairIniciais(nomeCompleto) {
   const ignorar = ['de', 'da', 'do', 'das', 'dos', 'e'];
   const partes = nomeCompleto
@@ -185,7 +177,6 @@ function extrairIniciais(nomeCompleto) {
   return partes.map((p) => `${p.charAt(0).toUpperCase()}.`).join(' ');
 }
 
-// Navegação entre as 5 Telas do Protótipo
 function switchScreen(screenId) {
   state.currentScreen = screenId;
 
@@ -201,10 +192,10 @@ function switchScreen(screenId) {
   document.querySelectorAll('[data-screen-btn]').forEach((btn) => {
     const btnScreen = btn.getAttribute('data-screen-btn');
     if (btnScreen === screenId) {
-      btn.classList.add('bg-red-600', 'text-white', 'border-red-500');
+      btn.classList.add('bg-sky-600', 'text-white', 'border-sky-400');
       btn.classList.remove('bg-slate-800/80', 'text-slate-300', 'border-slate-700');
     } else {
-      btn.classList.remove('bg-red-600', 'text-white', 'border-red-500');
+      btn.classList.remove('bg-sky-600', 'text-white', 'border-sky-400');
       btn.classList.add('bg-slate-800/80', 'text-slate-300', 'border-slate-700');
     }
   });
@@ -212,7 +203,6 @@ function switchScreen(screenId) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Alternar entre os 3 Perfis de Login (Banhista, GVC, Admin) na Tela 4
 function setRoleView(role) {
   state.currentRole = role;
 
@@ -221,7 +211,7 @@ function setRoleView(role) {
     const panel = document.getElementById(`panel-role-${r}`);
     if (btn) {
       if (r === role) {
-        btn.className = 'px-4 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm uppercase transition-all bg-[#f7d117] text-slate-950 shadow-lg border-2 border-white';
+        btn.className = 'px-4 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm uppercase transition-all btn-friendly-primary';
       } else {
         btn.className = 'px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm uppercase transition-all bg-[#061326] text-slate-300 hover:text-white border border-slate-700';
       }
@@ -234,11 +224,11 @@ function setRoleView(role) {
   const badge = document.getElementById('header-role-indicator');
   if (badge) {
     const labels = {
-      banhista: '🏖️ Logado: Banhista',
-      gvc: '🛟 Logado: GVC',
-      admin: '🛡️ Logado: Admin ASAF'
+      banhista: '🏖️ Painel: Banhista',
+      gvc: '🛟 Painel: GVC',
+      admin: '🛡️ Painel: Admin'
     };
-    badge.textContent = labels[role] || 'Portal Login';
+    badge.textContent = labels[role] || 'Acessar Portal';
   }
 
   renderizarMuralInterno();
@@ -247,7 +237,6 @@ function setRoleView(role) {
   renderizarNoticias();
 }
 
-// Simulador de Cobertura de Praias (Inverno vs Verão vs Proposta ASAF)
 function setSeasonMode(mode) {
   state.seasonMode = mode;
 
@@ -255,9 +244,9 @@ function setSeasonMode(mode) {
     const btn = document.getElementById(`btn-season-${m}`);
     if (!btn) return;
     if (m === mode) {
-      btn.className = 'px-4 py-2.5 rounded-lg font-semibold text-sm transition-all bg-red-600 text-white shadow-lg shadow-red-600/30 border border-red-400';
+      btn.className = 'px-4 py-2.5 rounded-xl font-bold text-sm transition-all btn-friendly-primary';
     } else {
-      btn.className = 'px-4 py-2.5 rounded-lg font-semibold text-sm transition-all bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700';
+      btn.className = 'px-4 py-2.5 rounded-xl font-semibold text-sm transition-all bg-slate-800/90 text-slate-300 hover:bg-slate-700 border border-slate-700';
     }
   });
 
@@ -266,19 +255,21 @@ function setSeasonMode(mode) {
   if (!grid || !banner) return;
 
   if (mode === 'inverno') {
-    banner.className = 'p-4 rounded-xl bg-red-950/70 border border-red-500/40 text-red-100 mb-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4';
+    banner.className = 'p-4 rounded-xl bg-slate-900/90 border border-red-500/40 text-slate-100 mb-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4';
     banner.innerHTML = `
       <div>
-        <span class="inline-block px-2.5 py-0.5 rounded bg-red-600 text-white text-xs font-bold uppercase tracking-wider mb-1">Alerta Estadual SC: Fora de Temporada (Outono/Inverno/Primavera)</span>
-        <p class="text-sm md:text-base font-medium">Mais de <strong>90% das praias de Florianópolis e do litoral catarinense ficam sem postos ativos (Bandeira Preta)</strong> fora do verão. O socorro depende de deslocamento distante via 193.</p>
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-red-600/20 border border-red-500/40 text-red-300 text-xs font-bold uppercase tracking-wider mb-1">
+          🚩 Sem GVC para Sinalizar a Maré de Retorno (Outono/Inverno/Primavera)
+        </span>
+        <p class="text-sm md:text-base text-slate-200">Mais de <strong>90% das praias ficam sem Guarda-Vidas</strong> fora do verão: não há quem identifique as valas nem finque a <strong>Bandeira Vermelha de corrente de retorno</strong> na areia para alertar os banhistas.</p>
       </div>
       <div class="text-right shrink-0">
-        <div class="text-2xl font-display font-bold text-yellow-400">+90% Fechados</div>
-        <div class="text-xs text-red-200">postos em Bandeira Preta</div>
+        <div class="text-2xl font-display font-bold text-amber-400">+90% Sem GVC</div>
+        <div class="text-xs text-slate-300">correntes de retorno sem sinalização</div>
       </div>
     `;
   } else if (mode === 'verao') {
-    banner.className = 'p-4 rounded-xl bg-amber-950/70 border border-amber-500/40 text-amber-100 mb-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4';
+    banner.className = 'p-4 rounded-xl bg-slate-900/90 border border-amber-500/40 text-amber-100 mb-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4';
     banner.innerHTML = `
       <div>
         <span class="inline-block px-2.5 py-0.5 rounded bg-amber-500 text-slate-950 text-xs font-bold uppercase tracking-wider mb-1">Alta Temporada em SC: Sobrecarga e Precarização</span>
@@ -290,15 +281,15 @@ function setSeasonMode(mode) {
       </div>
     `;
   } else {
-    banner.className = 'p-4 rounded-xl bg-emerald-950/70 border border-emerald-500/40 text-emerald-100 mb-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4';
+    banner.className = 'p-4 rounded-xl bg-emerald-950/60 border border-emerald-500/40 text-emerald-100 mb-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4';
     banner.innerHTML = `
       <div>
         <span class="inline-block px-2.5 py-0.5 rounded bg-emerald-500 text-slate-950 text-xs font-bold uppercase tracking-wider mb-1">Pauta ASAF (asafgv.com): Guarda-Vidas o Ano Inteiro + Contratação Digna</span>
-        <p class="text-sm md:text-base font-medium">Cobertura permanente de salvamento aquático em Florianópolis e no litoral de SC o ano todo, com jornada justa de 6h/dia sem redução salarial, contratação digna e plano de carreira.</p>
+        <p class="text-sm md:text-base font-medium">Prevenção ativa com <strong>Bandeira Vermelha demarcando as correntes de retorno o ano todo</strong>, jornada justa de 6h/dia sem redução salarial, contratação digna e plano de carreira.</p>
       </div>
       <div class="text-right shrink-0">
         <div class="text-2xl font-display font-bold text-emerald-400">365 Dias</div>
-        <div class="text-xs text-emerald-200">de proteção real à vida</div>
+        <div class="text-xs text-emerald-200">de prevenção e salvamento</div>
       </div>
     `;
   }
@@ -314,8 +305,8 @@ function setSeasonMode(mode) {
         cardBorder = 'border-emerald-500/30 bg-slate-900/70';
         postInfo = b.postsWinter;
       } else {
-        statusBadge = `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-red-500/20 text-red-300 border border-red-500/40"><span class="w-2 h-2 rounded-full bg-red-500 marker-danger"></span>SEM GVC</span>`;
-        cardBorder = 'border-red-500/40 bg-red-950/20';
+        statusBadge = `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-red-500/20 text-red-300 border border-red-500/40">🚩 Sem GVC</span>`;
+        cardBorder = 'border-slate-700/80 bg-slate-900/70';
         postInfo = b.postsWinter;
       }
     } else if (mode === 'verao') {
@@ -325,7 +316,7 @@ function setSeasonMode(mode) {
     } else {
       statusBadge = `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40"><span class="w-2 h-2 rounded-full bg-emerald-400 marker-safe"></span>Cobertura Permanente ASAF</span>`;
       cardBorder = 'border-emerald-500/40 bg-emerald-950/15';
-      postInfo = 'Efetivo fixo anual + Turno 6h';
+      postInfo = 'GVC fixo anual + Sinalização de corrente';
     }
 
     return `
@@ -337,17 +328,16 @@ function setSeasonMode(mode) {
           </div>
           ${statusBadge}
         </div>
-        <p class="text-xs text-slate-300 mb-2"><strong>Risco local:</strong> ${b.risk}</p>
+        <p class="text-xs text-slate-300 mb-2"><strong>Condição do mar:</strong> ${b.risk}</p>
         <div class="text-xs font-semibold text-slate-200 pt-2 border-t border-slate-800 flex items-center justify-between">
-          <span>Cobertura:</span>
-          <span class="${mode === 'inverno' && b.inverno !== 'ativo' ? 'text-red-400' : 'text-yellow-400'}">${postInfo}</span>
+          <span>Situação:</span>
+          <span class="${mode === 'inverno' && b.inverno !== 'ativo' ? 'text-amber-400' : 'text-sky-300'}">${postInfo}</span>
         </div>
       </div>
     `;
   }).join('');
 }
 
-// Algoritmo Oficial de Validação de CPF (Módulo 11)
 function validarCPF(cpf) {
   const clean = cpf.replace(/\D/g, '');
   if (clean.length !== 11) return false;
@@ -420,18 +410,10 @@ function atualizarStatusCPF(cpfStr) {
     return;
   }
   if (validarCPF(cpfStr)) {
-    feedback.innerHTML = '<span class="text-emerald-400 text-xs font-semibold">✓ CPF matematicamente válido (Criptografado AES-256 no banco)</span>';
+    feedback.innerHTML = '<span class="text-emerald-400 text-xs font-semibold">✓ CPF válido</span>';
   } else {
     feedback.innerHTML = '<span class="text-red-400 text-xs font-semibold">✕ CPF inválido. Verifique os números ou clique em "Gerar CPF de Teste".</span>';
   }
-}
-
-// Atualiza prévia das iniciais em tempo real enquanto o usuário digita o nome
-function atualizarPreviaIniciais(nome) {
-  const previewEl = document.getElementById('initials-preview-badge');
-  if (!previewEl) return;
-  const iniciais = extrairIniciais(nome || 'João Carlos da Silva');
-  previewEl.textContent = iniciais;
 }
 
 async function gerarHashSHA256(texto) {
@@ -457,26 +439,24 @@ function iniciarAssinaturaPeticao(event) {
   const city = document.getElementById('pet-city').value.trim();
   const neighborhood = document.getElementById('pet-neighborhood').value.trim();
   const profile = document.getElementById('pet-profile').value;
-  const displayModeEl = document.getElementById('pet-privacy-mode');
-  const displayMode = displayModeEl ? displayModeEl.value : 'initials';
   const lgpdConsent = document.getElementById('pet-lgpd').checked;
   const errorBox = document.getElementById('pet-error-box');
 
   if (!validarCPF(cpf)) {
     errorBox.classList.remove('hidden');
-    errorBox.textContent = 'Por favor, informe um CPF válido para garantir a legitimidade jurídica da assinatura (ou use o botão "Gerar CPF de Teste").';
+    errorBox.textContent = 'Por favor, informe um CPF válido para validar a assinatura (ou use o botão "Gerar CPF de Teste").';
     return;
   }
 
   if (!name || name.split(' ').length < 2) {
     errorBox.classList.remove('hidden');
-    errorBox.textContent = 'Informe seu Nome e Sobrenome completos para o documento oficial de protocolo (no site público aparecerão apenas suas iniciais).';
+    errorBox.textContent = 'Informe seu Nome e Sobrenome completos.';
     return;
   }
 
   if (!lgpdConsent) {
     errorBox.classList.remove('hidden');
-    errorBox.textContent = 'É necessário aceitar o termo de finalidade específica (LGPD) para validar sua assinatura.';
+    errorBox.textContent = 'É necessário aceitar o termo de finalidade da petição (LGPD).';
     return;
   }
 
@@ -489,7 +469,6 @@ function iniciarAssinaturaPeticao(event) {
   state.pendingSignature = {
     name,
     initials,
-    displayMode,
     cpfMasked,
     contact,
     city,
@@ -536,13 +515,8 @@ async function confirmarAssinaturaOTP() {
     protocol
   };
 
-  // No mural público mostra SOMENTE AS INICIAIS (ou "Apoiador Verificado (Iniciais)") para evitar expor pessoas
-  const publicLabel = pending.displayMode === 'anonymous_initials'
-    ? `Sigiloso (${pending.initials})`
-    : pending.initials;
-
   state.supporters.unshift({
-    initials: publicLabel,
+    initials: pending.initials,
     location: `${pending.neighborhood}, ${pending.city}`,
     profile: pending.profile,
     time: 'agora mesmo'
@@ -562,16 +536,14 @@ function renderizarComprovanteECard() {
   };
 
   setTxt('rec-protocol', sig.protocol);
-  setTxt('rec-name', `${sig.name} (Restrito ao Documento Oficial)`);
-  setTxt('rec-public-initials', `Exibido no site apenas como: ${sig.initials}`);
+  setTxt('rec-name', `${sig.name} (Exibido no mural como ${sig.initials})`);
   setTxt('rec-cpf', sig.cpfMasked);
   setTxt('rec-location', `${sig.neighborhood} — ${sig.city}`);
   setTxt('rec-profile', sig.profile);
   setTxt('rec-time', sig.timestamp);
   setTxt('rec-hash', sig.hash);
 
-  // No Card do Instagram Stories também usa apenas as Iniciais para proteger o apoiador
-  setTxt('story-name', `Iniciais: ${sig.initials}`);
+  setTxt('story-name', sig.initials);
   setTxt('story-profile', `${sig.profile} • ${sig.city}`);
   setTxt('story-number', `#${state.totalSignatures.toLocaleString('pt-BR')}`);
 }
@@ -592,15 +564,15 @@ function atualizarContadoresEMural() {
     wall.innerHTML = state.supporters.slice(0, 8).map((s) => `
       <div class="p-3.5 rounded-xl bg-[#091b36]/90 border border-slate-800 flex items-center justify-between gap-3">
         <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-red-600/20 border border-[#f7d117]/50 text-[#f7d117] font-bold flex items-center justify-center text-xs shrink-0">
+          <div class="w-10 h-10 rounded-full bg-sky-500/20 border border-sky-400/40 text-sky-300 font-bold flex items-center justify-center text-xs shrink-0">
             ${s.initials.slice(0, 4)}
           </div>
           <div>
             <div class="flex flex-wrap items-center gap-2">
-              <span class="font-bold text-white text-sm">Iniciais: ${s.initials}</span>
-              <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 font-medium">✓ Doc. Oficial OK (Sigilo Público)</span>
+              <span class="font-bold text-white text-sm">${s.initials}</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 font-medium">✓ Assinatura Verificada</span>
             </div>
-            <div class="text-xs text-slate-300">${s.location} • <span class="text-[#f7d117]">${s.profile}</span></div>
+            <div class="text-xs text-slate-300">${s.location} • <span class="text-amber-300">${s.profile}</span></div>
           </div>
         </div>
         <span class="text-xs text-slate-400 shrink-0">${s.time}</span>
@@ -613,7 +585,6 @@ function atualizarContadoresEMural() {
 // FUNÇÕES DOS 3 PERFIS DE LOGIN (BANHISTA, GVC, ADMIN) & ENGINE DE NOTÍCIAS
 // =========================================================================
 
-// 1. BANHISTA: Indicar falta de GVC / problema em praia
 function enviarRelatoPraia(event) {
   event.preventDefault();
   const beach = document.getElementById('rep-beach').value.trim();
@@ -630,7 +601,7 @@ function enviarRelatoPraia(event) {
     category,
     date: 'Outubro/2026 (Novo)',
     description: desc,
-    author: `Indicado no Portal (Iniciais protegidas: ${initials})`
+    author: `${initials} • Comunidade`
   });
 
   document.getElementById('rep-beach').value = '';
@@ -652,17 +623,16 @@ function renderizarRelatos() {
   container.innerHTML = state.reports.map((r) => `
     <div class="p-4 rounded-xl bg-[#061326] border border-slate-800">
       <div class="flex flex-wrap items-center justify-between gap-2 mb-1.5">
-        <span class="px-2.5 py-0.5 rounded bg-red-500/20 text-red-300 border border-red-500/30 text-xs font-bold uppercase">${r.category}</span>
+        <span class="px-2.5 py-0.5 rounded bg-sky-500/20 text-sky-300 border border-sky-500/30 text-xs font-bold uppercase">${r.category}</span>
         <span class="text-xs text-slate-400">${r.date}</span>
       </div>
       <h4 class="font-bold text-white text-sm sm:text-base mb-1">${r.beach}</h4>
       <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-2">"${r.description}"</p>
-      <div class="text-xs text-[#f7d117] font-medium">🛡️ ${r.author}</div>
+      <div class="text-xs text-amber-300 font-medium">📍 ${r.author}</div>
     </div>
   `).join('');
 }
 
-// 2. BANHISTA ENVIAR DÚVIDA & GVC RESPONDER DÚVIDA
 function enviarDuvidaBanhista(event) {
   event.preventDefault();
   const name = document.getElementById('q-bather-name').value.trim();
@@ -673,7 +643,7 @@ function enviarDuvidaBanhista(event) {
   const initials = extrairIniciais(name || 'Banhista SC');
   state.questions.unshift({
     id: `q-${Date.now()}`,
-    batherInitials: `${initials} (Banhista — SC)`,
+    batherInitials: `${initials} (SC)`,
     beach,
     question,
     answer: '',
@@ -694,8 +664,8 @@ function responderDuvidaGVC(questionId) {
   if (q) {
     q.answer = input.value.trim();
     q.answeredBy = state.currentRole === 'admin'
-      ? 'Respondido pela Diretoria ASAF (Admin)'
-      : 'Respondido por GVC Verificado (Iniciais: L. M. S.)';
+      ? 'Diretoria ASAF'
+      : 'GVC L. M. S.';
     q.status = 'answered';
     renderizarDuvidas();
   }
@@ -716,7 +686,7 @@ function renderizarDuvidas() {
       <p class="text-sm font-semibold text-white">❓ "${q.question}"</p>
       ${q.status === 'answered' ? `
         <div class="p-3 rounded-lg bg-[#091b36] border border-emerald-500/30 text-xs text-slate-200 space-y-1">
-          <div class="font-bold text-[#f7d117]">🛟 ${q.answeredBy}:</div>
+          <div class="font-bold text-amber-300">🛟 ${q.answeredBy}:</div>
           <p>${q.answer}</p>
         </div>
       ` : ''}
@@ -730,20 +700,20 @@ function renderizarDuvidas() {
       <div class="p-4 rounded-xl bg-[#061326] border border-slate-800 space-y-2.5">
         <div class="flex items-center justify-between gap-2">
           <span class="text-xs font-bold text-sky-300">${q.beach} • ${q.batherInitials}</span>
-          <span class="px-2 py-0.5 rounded text-[11px] font-bold ${q.status === 'answered' ? 'bg-emerald-500/20 text-emerald-300' : 'bg-red-500/20 text-red-300'}">
+          <span class="px-2 py-0.5 rounded text-[11px] font-bold ${q.status === 'answered' ? 'bg-emerald-500/20 text-emerald-300' : 'bg-amber-500/20 text-amber-300'}">
             ${q.status === 'answered' ? '✓ Respondida' : '🔔 Pendente de Resposta GVC'}
           </span>
         </div>
         <p class="text-sm font-semibold text-white">❓ "${q.question}"</p>
         ${q.status === 'answered' ? `
           <div class="p-3 rounded-lg bg-[#091b36] border border-emerald-500/30 text-xs text-slate-200">
-            <strong class="text-[#f7d117]">${q.answeredBy}:</strong> ${q.answer}
+            <strong class="text-amber-300">${q.answeredBy}:</strong> ${q.answer}
           </div>
         ` : `
           <div class="flex flex-col sm:flex-row gap-2 pt-1">
             <input id="ans-input-${q.id}" type="text" placeholder="Escreva a orientação técnica de guarda-vidas para este banhista..."
               class="flex-1 px-3 py-2 rounded-lg bg-slate-950 border border-slate-700 text-white text-xs" />
-            <button onclick="responderDuvidaGVC('${q.id}')" class="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shrink-0">
+            <button onclick="responderDuvidaGVC('${q.id}')" class="px-4 py-2 rounded-lg btn-friendly-primary font-bold text-xs shrink-0">
               Responder como GVC
             </button>
           </div>
@@ -753,7 +723,6 @@ function renderizarDuvidas() {
   }
 }
 
-// 3. MURAL INTERNO GVC & SOFT DELETE PELO ADMIN
 function postarMuralInterno(event) {
   event.preventDefault();
   const input = document.getElementById('mural-new-text');
@@ -761,7 +730,7 @@ function postarMuralInterno(event) {
 
   state.muralPosts.unshift({
     id: `m-${Date.now()}`,
-    author: state.currentRole === 'admin' ? 'Diretoria ASAF (Admin)' : 'GVC Associado (Iniciais: L. M. S.)',
+    author: state.currentRole === 'admin' ? 'Diretoria ASAF (Admin)' : 'GVC L. M. S.',
     badge: state.currentRole === 'admin' ? 'Comunicado Diretoria' : 'Mural GVC SC',
     time: 'Agora mesmo',
     content: input.value.trim(),
@@ -794,7 +763,6 @@ function renderizarMuralInterno() {
   const gvcContainer = document.getElementById('mural-list-gvc');
   const adminContainer = document.getElementById('mural-list-admin');
 
-  // GVC vê apenas posts ativos (SoftDeleteManager: is_deleted=False)
   if (gvcContainer) {
     const activePosts = state.muralPosts.filter((p) => !p.isDeleted);
     gvcContainer.innerHTML = activePosts.map((p) => `
@@ -811,7 +779,6 @@ function renderizarMuralInterno() {
     `).join('');
   }
 
-  // Admin vê todos os posts (all_objects), podendo aplicar Soft Delete ou Restaurar
   if (adminContainer) {
     adminContainer.innerHTML = state.muralPosts.map((p) => `
       <div class="p-4 rounded-xl border transition-all ${p.isDeleted ? 'bg-red-950/25 border-red-500/40 opacity-80' : 'bg-[#061326] border-slate-800'}">
@@ -828,20 +795,19 @@ function renderizarMuralInterno() {
                 ↩ Restaurar Registro
               </button>
             ` : `
-              <button onclick="softDeleteMuralPost('${p.id}')" class="px-2.5 py-1 rounded bg-red-600/80 hover:bg-red-600 text-white text-[11px] font-bold">
-                🗑️ Apagar (Soft Delete)
+              <button onclick="softDeleteMuralPost('${p.id}')" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-red-600 text-slate-300 hover:text-white text-[11px] font-bold transition-colors">
+                🗑️ Ocultar (Soft Delete)
               </button>
             `}
           </div>
         </div>
         <p class="text-xs sm:text-sm text-slate-200">${p.content}</p>
-        ${p.isDeleted ? `<div class="mt-2 text-[11px] font-mono text-red-300">🔒 Auditoria Django: ${p.deletedInfo}</div>` : ''}
+        ${p.isDeleted ? `<div class="mt-2 text-[11px] font-mono text-red-300">Auditoria Django: ${p.deletedInfo}</div>` : ''}
       </div>
     `).join('');
   }
 }
 
-// 4. AGENDA DE HORÁRIOS (ADMIN ADMINISTRA, GVC VISUALIZA)
 function adicionarHorarioAgenda(event) {
   event.preventDefault();
   const date = document.getElementById('ag-date').value.trim();
@@ -880,7 +846,7 @@ function renderizarAgenda() {
       <div class="p-3.5 rounded-xl bg-[#061326] border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
         <div>
           <div class="flex items-center gap-2">
-            <span class="text-xs font-mono font-bold text-[#f7d117]">${s.date} • ${s.time}</span>
+            <span class="text-xs font-mono font-bold text-sky-300">${s.date} • ${s.time}</span>
             <span class="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">${s.type}</span>
           </div>
           <div class="font-bold text-white text-sm mt-0.5">${s.title}</div>
@@ -894,11 +860,11 @@ function renderizarAgenda() {
     adminAgenda.innerHTML = state.agendaSlots.map((s) => `
       <div class="p-3.5 rounded-xl bg-[#061326] border border-slate-800 flex items-center justify-between gap-3">
         <div>
-          <div class="text-xs font-mono font-bold text-[#f7d117]">${s.date} (${s.time})</div>
+          <div class="text-xs font-mono font-bold text-sky-300">${s.date} (${s.time})</div>
           <div class="font-bold text-white text-xs sm:text-sm">${s.title}</div>
           <div class="text-xs text-slate-400">📍 ${s.location}</div>
         </div>
-        <button onclick="removerHorarioAgenda('${s.id}')" class="px-2.5 py-1 rounded bg-red-600/30 hover:bg-red-600 text-red-200 hover:text-white text-xs font-bold shrink-0">
+        <button onclick="removerHorarioAgenda('${s.id}')" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-red-600 text-slate-300 hover:text-white text-xs font-bold shrink-0 transition-colors">
           Remover
         </button>
       </div>
@@ -906,7 +872,6 @@ function renderizarAgenda() {
   }
 }
 
-// 5. ENGINE DE NOTÍCIAS E PUBLICAÇÕES (PÚBLICAS + INTERNAS GVC)
 function publicarNoticiaAdmin(event) {
   event.preventDefault();
   const title = document.getElementById('news-title').value.trim();
@@ -936,17 +901,17 @@ function renderizarNoticias() {
   if (publicFeed) {
     const pubArticles = state.newsArticles.filter((a) => a.visibility === 'PUBLIC');
     publicFeed.innerHTML = pubArticles.map((a) => `
-      <article class="p-5 rounded-2xl bg-[#0a1e3c]/85 border border-slate-700/80 hover:border-[#f7d117] transition-all flex flex-col justify-between">
+      <article class="p-5 rounded-2xl bg-[#0a1e3c]/85 border border-slate-700/80 hover:border-sky-400/60 transition-all flex flex-col justify-between">
         <div>
           <div class="flex items-center justify-between gap-2 mb-2">
-            <span class="px-2.5 py-0.5 rounded bg-[#e61919] text-white text-[11px] font-bold uppercase">${a.category}</span>
+            <span class="px-2.5 py-0.5 rounded bg-sky-500/20 text-sky-300 border border-sky-400/30 text-[11px] font-bold uppercase">${a.category}</span>
             <span class="text-xs text-slate-400">${a.date}</span>
           </div>
           <h4 class="font-display text-lg font-bold text-white uppercase mb-2">${a.title}</h4>
           <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">${a.summary}</p>
         </div>
-        <div class="pt-3 mt-4 border-t border-slate-800 text-xs text-[#f7d117] font-bold">
-          Portal asafgv.com • Redação Oficial ASAF
+        <div class="pt-3 mt-4 border-t border-slate-800 text-xs text-sky-300 font-semibold">
+          Portal asafgv.com • Redação ASAF
         </div>
       </article>
     `).join('');
@@ -957,7 +922,7 @@ function renderizarNoticias() {
       <div class="p-3.5 rounded-xl bg-[#061326] border border-slate-800">
         <div class="flex items-center justify-between gap-2 mb-1">
           <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase ${a.visibility === 'INTERNAL_GVC' ? 'bg-amber-500 text-slate-950' : 'bg-sky-500/20 text-sky-300'}">
-            ${a.visibility === 'INTERNAL_GVC' ? '🔒 Exclusivo GVC' : '🌐 Público (asafgv.com)'} • ${a.category}
+            ${a.visibility === 'INTERNAL_GVC' ? 'Interno GVC' : 'Público (asafgv.com)'} • ${a.category}
           </span>
           <span class="text-xs text-slate-400">${a.date}</span>
         </div>
@@ -968,9 +933,8 @@ function renderizarNoticias() {
   }
 }
 
-// Exportação de Amostra CSV Auditável para ALESC / Câmara / MPSC / MPT
 function exportarAmostraCSV() {
-  const headers = ['Protocolo', 'Iniciais_Publicas_Site', 'Nome_Documento_Oficial', 'CPF_Mascarado_LGPD', 'Municipio_SC', 'Bairro', 'Perfil', 'Timestamp_UTC3', 'Hash_SHA256_Auditoria'];
+  const headers = ['Protocolo', 'Iniciais_Mural', 'Nome_Documento_Oficial', 'CPF_Mascarado_LGPD', 'Municipio_SC', 'Bairro', 'Perfil', 'Timestamp_UTC3', 'Hash_SHA256_Auditoria'];
   const rows = [
     [
       state.lastConfirmedSignature.protocol,
@@ -998,31 +962,23 @@ function exportarAmostraCSV() {
 }
 
 function copiarTextoCompartilhamento() {
-  const texto = `🚨 Assinei a Petição Estadual da ASAF (@asaf.gv) em defesa dos Guarda-Vidas de Florianópolis e de toda Santa Catarina!\n\n🔒 No site público aparecem apenas suas iniciais (100% seguro pela LGPD), e sua assinatura valida o documento oficial entregue à ALESC, Governo de SC e MP.\n\n✊ Pautas: Reajuste Digno | Redução de Carga Horária s/ redução salarial | Guarda-Vidas o Ano Inteiro | Contratação Digna | Plano de Carreira.\n\nAssine agora em: https://asafgv.com`;
+  const texto = `🚩 Assinei a Petição da ASAF (@asaf.gv) em defesa dos Guarda-Vidas de Florianópolis e de toda Santa Catarina!\n\n✊ Pautas: Reajuste Digno | Redução de Carga Horária s/ redução salarial | Guarda-Vidas o Ano Inteiro | Contratação Digna | Plano de Carreira.\n\nAssine e apoie em: https://asafgv.com`;
   navigator.clipboard.writeText(texto).then(() => {
     const btn = document.getElementById('btn-copy-share');
     if (btn) {
       const orig = btn.innerHTML;
-      btn.innerHTML = '✓ Link de asafgv.com Copiado para o WhatsApp!';
+      btn.innerHTML = '✓ Link de asafgv.com Copiado!';
       setTimeout(() => { btn.innerHTML = orig; }, 3000);
     }
   });
 }
 
-// Inicialização
 document.addEventListener('DOMContentLoaded', () => {
   setSeasonMode('inverno');
   atualizarContadoresEMural();
   renderizarComprovanteECard();
   renderizarRelatos();
   setRoleView('gvc');
-
-  const nameInput = document.getElementById('pet-name');
-  if (nameInput) {
-    nameInput.addEventListener('input', (e) => {
-      atualizarPreviaIniciais(e.target.value);
-    });
-  }
 
   const cpfInput = document.getElementById('pet-cpf');
   if (cpfInput) {

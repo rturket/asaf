@@ -3,30 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>asafgv.com | A.S.A.F. (@asaf.gv) — Mobilização Estadual SC & Florianópolis</title>
+  <title>asafgv.com | A.S.A.F. (@asaf.gv) — Salvamento Aquático em Florianópolis e SC</title>
   <link rel="icon" type="image/png" href="assets/img/logo-asaf.png" />
-  <meta name="description" content="Portal oficial asafgv.com da ASAF: valorização dos Guarda-Vidas Civis e Bombeiros em Florianópolis e em toda Santa Catarina. Assine com sigilo público (apenas iniciais no site)." />
+  <meta name="description" content="Portal oficial asafgv.com da ASAF: valorização dos Guarda-Vidas Civis e Bombeiros em Florianópolis e em toda Santa Catarina, prevenção à maré de retorno e guarda-vidas o ano inteiro." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:wght@400;500;600;700;800&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-<body class="min-h-screen flex flex-col selection:bg-red-600 selection:text-white">
+<body class="min-h-screen flex flex-col selection:bg-sky-500 selection:text-white">
 
   <!-- BARRA DE NAVEGAÇÃO RÁPIDA DO PROTÓTIPO (5 TELAS + PERFIS) -->
-  <div class="no-print bg-[#040d1a] border-b border-yellow-500/20 px-4 py-2 sticky top-0 z-50">
+  <div class="no-print bg-[#040d1a] border-b border-slate-800 px-4 py-2 sticky top-0 z-50">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center gap-2">
-        <span class="px-2 py-0.5 rounded bg-[#f7d117] text-slate-950 font-extrabold text-[11px] uppercase tracking-wider">asafgv.com</span>
-        <span class="text-xs text-slate-300 hidden md:inline">Protótipo Estadual SC + 3 Perfis Django (Banhista, GVC, Admin):</span>
+        <span class="px-2 py-0.5 rounded bg-sky-500 text-slate-950 font-extrabold text-[11px] uppercase tracking-wider">asafgv.com</span>
+        <span class="text-xs text-slate-300 hidden md:inline">Navegação do Protótipo:</span>
       </div>
       <div class="flex flex-wrap items-center gap-1.5">
-        <button onclick="switchScreen('home')" data-screen-btn="home" class="px-2.5 py-1 rounded text-xs font-semibold border transition-all bg-red-600 text-white border-red-500">
-          1. Home & Notícias
+        <button onclick="switchScreen('home')" data-screen-btn="home" class="px-2.5 py-1 rounded text-xs font-semibold border transition-all bg-sky-600 text-white border-sky-400">
+          1. Home & Pautas
         </button>
         <button onclick="switchScreen('peticao')" data-screen-btn="peticao" class="px-2.5 py-1 rounded text-xs font-semibold border transition-all bg-slate-800/80 text-slate-300 border-slate-700 hover:text-white">
-          2. Assinar (Iniciais/Sigilo)
+          2. Assinar Petição
         </button>
         <button onclick="switchScreen('comprovante')" data-screen-btn="comprovante" class="px-2.5 py-1 rounded text-xs font-semibold border transition-all bg-slate-800/80 text-slate-300 border-slate-700 hover:text-white">
           3. Comprovante & Card
@@ -35,17 +35,17 @@
           4. Portal (Banhista / GVC / Admin)
         </button>
         <button onclick="switchScreen('transparencia')" data-screen-btn="transparencia" class="px-2.5 py-1 rounded text-xs font-semibold border transition-all bg-slate-800/80 text-slate-300 border-slate-700 hover:text-white">
-          5. Dossiê Estadual & Arquitetura
+          5. Dossiê & Arquitetura
         </button>
       </div>
     </div>
   </div>
 
-  <!-- FAIXA DE ALERTA DE SALVAMENTO -->
-  <div class="no-print h-1.5 w-full rescue-stripes"></div>
+  <!-- FAIXA SUPERIOR -->
+  <div class="no-print h-1 w-full rescue-stripes"></div>
 
   <!-- CABEÇALHO PRINCIPAL COM A LOGO OFICIAL DA ASAF -->
-  <header class="no-print bg-[#0a1e3c]/95 backdrop-blur-md border-b border-yellow-400/25">
+  <header class="no-print bg-[#0a1e3c]/95 backdrop-blur-md border-b border-sky-400/20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex flex-wrap items-center justify-between gap-4">
       <!-- Logo Oficial ASAF -->
       <div onclick="switchScreen('home')" class="flex items-center gap-4 cursor-pointer group">
@@ -55,47 +55,47 @@
           <div class="flex flex-wrap items-center gap-2">
             <h1 class="font-emblem text-xl sm:text-2xl text-white tracking-wider uppercase">A.S.A.F.</h1>
             <span class="px-2 py-0.5 rounded bg-[#061326] border border-sky-400/40 text-sky-300 font-mono text-xs font-bold">asafgv.com</span>
-            <a href="https://www.instagram.com/asaf.gv/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="text-xs px-2.5 py-0.5 rounded-full bg-red-600/30 border border-yellow-400/50 text-yellow-300 hover:bg-red-600/50 font-bold transition-all">
+            <a href="https://www.instagram.com/asaf.gv/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="text-xs px-2.5 py-0.5 rounded-full bg-sky-500/20 border border-sky-400/40 text-sky-200 hover:bg-sky-500/30 font-bold transition-all">
               @asaf.gv ↗
             </a>
           </div>
-          <p class="text-xs sm:text-sm text-sky-200/90 font-medium">Associação de Salvamento Aquático de Florianópolis • Mobilização Estadual SC 🌊✊🚩</p>
+          <p class="text-xs sm:text-sm text-sky-200/90 font-medium">Associação de Salvamento Aquático de Florianópolis • Mobilização em Santa Catarina</p>
         </div>
       </div>
 
-      <!-- Contador Rápido + Acesso aos 3 Perfis + CTA -->
+      <!-- Contador Rápido + Acesso aos 3 Perfis + CTA Amigável -->
       <div class="flex flex-wrap items-center gap-3">
         <div class="hidden lg:block text-right mr-2">
-          <div class="text-xs text-sky-200/80">Mobilização Estadual SC (24 Municípios)</div>
-          <div class="text-sm font-bold text-[#f7d117]"><span class="sig-counter-num">6.412</span> / 15.000 assinaturas</div>
+          <div class="text-xs text-sky-200/80">Apoio em Santa Catarina (24 Municípios)</div>
+          <div class="text-sm font-bold text-amber-300"><span class="sig-counter-num">6.412</span> / 15.000 assinaturas</div>
         </div>
-        <button onclick="switchScreen('guardavidas')" id="header-role-indicator" class="px-3.5 py-2.5 rounded-xl bg-[#061326] hover:bg-slate-900 text-[#f7d117] font-bold text-xs border border-[#f7d117]/40 transition-all">
-          🛟 Logado: GVC
+        <button onclick="switchScreen('guardavidas')" id="header-role-indicator" class="px-3.5 py-2.5 rounded-xl bg-[#061326] hover:bg-slate-900 text-sky-300 font-bold text-xs border border-sky-400/30 transition-all">
+          🛟 Painel: GVC
         </button>
-        <button onclick="switchScreen('peticao')" class="px-5 py-2.5 rounded-xl bg-[#e61919] hover:bg-red-500 text-white font-extrabold text-xs sm:text-sm shadow-lg shadow-red-600/40 border-2 border-[#f7d117] transition-all flex items-center gap-2 uppercase tracking-wide">
-          <span>✍️ Assinar Petição (Sigilo Público)</span>
+        <button onclick="switchScreen('peticao')" class="px-5 py-2.5 rounded-xl btn-friendly-primary font-extrabold text-xs sm:text-sm flex items-center gap-2 uppercase tracking-wide">
+          <span>✍️ Assinar a Petição</span>
         </button>
       </div>
     </div>
   </header>
 
   <!-- ===================================================================== -->
-  <!-- TELA 1: HOME / MANIFESTO ESTADUAL SC, NOTÍCIAS E AS 5 PAUTAS          -->
+  <!-- TELA 1: HOME / MANIFESTO ESTADUAL SC, BANDEIRA VERMELHA E AS 5 PAUTAS -->
   <!-- ===================================================================== -->
   <main id="screen-home" class="screen-view active flex-1">
-    <!-- HERO SECTION COM BRASÃO OFICIAL EM DESTAQUE -->
-    <section class="hero-bg border-b border-yellow-500/20 py-12 lg:py-16 px-4 sm:px-6 relative overflow-hidden">
+    <!-- HERO SECTION -->
+    <section class="hero-bg border-b border-sky-500/20 py-12 lg:py-16 px-4 sm:px-6 relative overflow-hidden">
       <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        <!-- Coluna Esquerda: Brasão + Manifesto Estadual -->
+        <!-- Coluna Esquerda: Brasão + Manifesto + Destaque Bandeira Vermelha -->
         <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex flex-wrap items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#061326]/80 border border-[#f7d117]/50 text-[#f7d117] text-xs sm:text-sm font-bold shadow-md">
-            <span class="w-2.5 h-2.5 rounded-full bg-[#e61919] marker-danger"></span>
+          <div class="inline-flex flex-wrap items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#061326]/80 border border-sky-400/40 text-sky-200 text-xs sm:text-sm font-semibold shadow-md">
+            <span class="w-2 h-2 rounded-full bg-sky-400"></span>
             <span>De Florianópolis para toda Santa Catarina • Portal Oficial asafgv.com</span>
           </div>
 
           <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
             <div class="shrink-0 relative group">
-              <div class="absolute -inset-2 rounded-full bg-gradient-to-tr from-[#e61919]/40 via-[#f7d117]/30 to-[#0d85d8]/40 blur-xl opacity-80 group-hover:opacity-100 transition-opacity"></div>
+              <div class="absolute -inset-2 rounded-full bg-gradient-to-tr from-sky-500/35 via-amber-400/25 to-blue-600/35 blur-xl opacity-80 group-hover:opacity-100 transition-opacity"></div>
               <img src="assets/img/logo-asaf.png" alt="Logo Oficial A.S.A.F."
                 class="relative w-40 h-40 sm:w-48 sm:h-48 object-contain asaf-logo-glow" />
             </div>
@@ -103,101 +103,164 @@
             <div class="space-y-3 text-center sm:text-left">
               <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold uppercase leading-[1.05] text-white drop-shadow">
                 Vidas Não Têm Temporada. <br />
-                <span class="text-[#f7d117]">Santa Catarina</span> Exige Respeito aos Guarda-Vidas!
+                <span class="text-amber-300">Quem Salva Vidas</span> Merece Valorização!
               </h2>
               <p class="text-sky-100/90 text-sm sm:text-base leading-relaxed">
-                Nascida nas praias de <strong>Florianópolis</strong>, a pauta da <strong>A.S.A.F.</strong> mobiliza todo o estado de <strong>Santa Catarina</strong>: a Lei Estadual nº 13.880/2006 e o abandono dos postos fora de temporada afetam todo o litoral catarinense e milhões de banhistas, moradores e turistas.
+                Nascida nas praias de <strong>Florianópolis</strong>, a <strong>A.S.A.F.</strong> une <strong>Guarda-Vidas Civis (GVCs)</strong>, <strong>Bombeiros Militares</strong> e banhistas de toda <strong>Santa Catarina</strong> pela valorização de quem protege o nosso litoral e pela presença de guarda-vidas o ano inteiro.
               </p>
             </div>
           </div>
 
-          <div class="bg-[#061326]/75 p-4 rounded-xl border border-emerald-400/30 flex items-start gap-3">
-            <span class="text-xl shrink-0">🔒</span>
-            <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
-              <strong class="text-emerald-400">Assine Sem Medo de Exposição ou Represália:</strong> No portal <strong>asafgv.com</strong>, sua assinatura completa (Nome e CPF) vai <strong>somente para o documento lacrado entregue às autoridades</strong>. No site público, aparecem <strong>apenas as suas iniciais</strong> (ex.: <code>L. M. S. — Florianópolis/SC</code>).
-            </p>
+          <!-- Destaque da Bandeira Vermelha (Sinal de Maré / Corrente de Retorno para GVCs) -->
+          <div class="bg-[#061326]/85 p-4 sm:p-5 rounded-2xl border border-red-500/40 flex flex-col sm:flex-row items-start sm:items-center gap-4 shadow-lg">
+            <!-- Ícone Vetorial da Bandeira Vermelha Triangular de GVC fincada na areia -->
+            <div class="w-14 h-14 rounded-xl bg-red-500/15 border border-red-500/40 flex items-center justify-center shrink-0">
+              <svg class="w-9 h-9" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Duna de areia -->
+                <path d="M8 42C14 39 22 39 28 42" stroke="#FACC15" stroke-width="3" stroke-linecap="round"/>
+                <!-- Haste de madeira/bambu -->
+                <line x1="16" y1="8" x2="16" y2="41" stroke="#FDE047" stroke-width="3" stroke-linecap="round"/>
+                <!-- Bandeira Vermelha Triangular de Corrente de Retorno -->
+                <path class="red-flag-wave" d="M17.5 9L42 16.5L17.5 24V9Z" fill="#EF4444" stroke="#FCA5A5" stroke-width="1.2" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="space-y-1">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="text-xs font-extrabold uppercase tracking-wider text-red-400">🚩 O Sinal da Bandeira Vermelha na Areia</span>
+                <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-amber-300 font-semibold">Maré / Corrente de Retorno</span>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                Repare nas <strong>duas bandeiras vermelhas</strong> na base da nossa logo: na rotina do Guarda-Vidas, a <strong>Bandeira Vermelha fincada na beira da praia</strong> demarca o ponto exato da <strong>maré de retorno (corrente de retorno)</strong> — responsável por mais de 85% dos afogamentos. Sem GVC na praia o ano inteiro para ler o mar e posicionar a bandeira vermelha, o perigo fica invisível para quem entra na água.
+              </p>
+            </div>
           </div>
 
-          <!-- Botões de Ação -->
+          <!-- Botões de Ação com Cores Amigáveis -->
           <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4 pt-1">
-            <button onclick="switchScreen('peticao')" class="px-7 py-4 rounded-xl bg-[#e61919] hover:bg-red-500 text-white font-extrabold text-base shadow-xl shadow-red-600/40 border-2 border-[#f7d117] transition-all uppercase tracking-wide">
-              ✍️ Assinar com Sigilo (Apenas Iniciais no Site)
+            <button onclick="switchScreen('peticao')" class="px-7 py-4 rounded-xl btn-friendly-primary font-extrabold text-base uppercase tracking-wide">
+              ✍️ Assinar a Petição Pelas 5 Pautas
             </button>
-            <button onclick="switchScreen('guardavidas')" class="px-6 py-4 rounded-xl bg-[#061326]/90 hover:bg-slate-900 text-[#f7d117] font-bold text-base border-2 border-[#f7d117]/50 transition-all">
-              🔐 Acessar Portal (Banhista / GVC / Admin)
+            <button onclick="switchScreen('guardavidas')" class="px-6 py-4 rounded-xl bg-[#061326]/90 hover:bg-slate-800 text-sky-200 font-bold text-base border border-sky-400/40 transition-all">
+              🛟 Portal: Banhista, GVC e Admin
             </button>
           </div>
 
           <!-- Destaques de Impacto Estadual -->
           <div class="grid grid-cols-3 gap-4 pt-4 border-t border-sky-300/20">
             <div class="bg-[#061326]/60 p-3 rounded-xl border border-slate-800">
-              <div class="font-display text-2xl sm:text-3xl font-bold text-[#e61919]">+90%</div>
-              <div class="text-xs text-slate-300">dos postos em SC fechados (Bandeira Preta) fora do verão</div>
+              <div class="font-display text-2xl sm:text-3xl font-bold text-amber-300">+90%</div>
+              <div class="text-xs text-slate-300">das praias sem GVC para sinalizar a maré de retorno fora do verão</div>
             </div>
             <div class="bg-[#061326]/60 p-3 rounded-xl border border-slate-800">
-              <div class="font-display text-2xl sm:text-3xl font-bold text-[#f7d117]">24 Cidades</div>
-              <div class="text-xs text-slate-300">de SC já mobilizadas (meta da Lei Estadual 16.585/15: 20+)</div>
+              <div class="font-display text-2xl sm:text-3xl font-bold text-sky-300">9h a 12h</div>
+              <div class="text-xs text-slate-300">de jornada diária exaustiva na temporada sem vínculo formal</div>
             </div>
             <div class="bg-[#061326]/60 p-3 rounded-xl border border-slate-800">
-              <div class="font-display text-2xl sm:text-3xl font-bold text-emerald-400">100% Sigilo</div>
-              <div class="text-xs text-slate-300">no site público aparecem apenas suas iniciais (LGPD)</div>
+              <div class="font-display text-2xl sm:text-3xl font-bold text-emerald-400">24 Cidades</div>
+              <div class="text-xs text-slate-300">de Santa Catarina já mobilizadas no abaixo-assinado</div>
             </div>
           </div>
         </div>
 
-        <!-- Coluna Direita: Card de Petição Rápida com Selo Oficial ASAF -->
+        <!-- Coluna Direita: Card de Petição Rápida -->
         <div class="lg:col-span-5">
-          <div class="bg-[#061326]/95 border-2 border-[#f7d117] rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
-            <div class="absolute top-0 left-0 right-0 h-2 rescue-stripes"></div>
+          <div class="bg-[#061326]/95 border border-sky-400/40 rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 left-0 right-0 h-1.5 rescue-stripes"></div>
 
             <div class="flex items-center justify-between mb-4 pt-1">
               <div class="flex items-center gap-2">
                 <img src="assets/img/logo-asaf.png" alt="Selo ASAF" class="w-9 h-9 object-contain" />
-                <span class="px-2.5 py-1 rounded-md bg-[#f7d117] text-slate-950 font-extrabold text-xs uppercase">Petição Estadual SC + Municipal</span>
+                <span class="px-2.5 py-1 rounded-md bg-sky-500/20 border border-sky-400/40 text-sky-200 font-bold text-xs uppercase">Mobilização Estadual SC</span>
               </div>
-              <span class="text-xs text-emerald-400 font-semibold flex items-center gap-1">🔒 Iniciais no Site</span>
+              <span class="text-xs text-emerald-400 font-semibold flex items-center gap-1">✓ Petição Auditável</span>
             </div>
 
             <h3 class="font-display text-2xl font-bold text-white uppercase mb-2">
-              Pressione a ALESC, o Governo de SC e as Prefeituras
+              Fortaleça os Guarda-Vidas em Santa Catarina
             </h3>
             <p class="text-xs sm:text-sm text-slate-300 mb-5">
-              Apoie a revisão da <strong>Lei Estadual nº 13.880/2006</strong> e a ativação de postos o ano inteiro. Seu documento valida o protocolo oficial sem expor seu nome na internet.
+              Sua assinatura apoia a revisão da <strong>Lei Estadual nº 13.880/2006</strong>, melhores condições de trabalho para os GVCs e cobertura de salvamento nas praias durante todo o ano.
             </p>
 
             <!-- Termômetro de Assinaturas Estadual -->
             <div class="bg-[#0a1e3c]/80 p-4 rounded-xl border border-sky-500/30 mb-5">
               <div class="flex justify-between items-baseline mb-2">
                 <div>
-                  <span class="font-display text-3xl font-bold text-[#f7d117] sig-counter-num">6.412</span>
+                  <span class="font-display text-3xl font-bold text-amber-300 sig-counter-num">6.412</span>
                   <span class="text-xs text-sky-200 ml-1">assinaturas em SC</span>
                 </div>
                 <span class="text-xs font-bold text-white">Meta: 15.000</span>
               </div>
               <div class="w-full h-3.5 bg-slate-950 rounded-full overflow-hidden border border-slate-700">
-                <div class="h-full bg-gradient-to-r from-[#e61919] via-orange-500 to-[#f7d117] sig-progress-bar transition-all duration-500" style="width: 42.7%"></div>
+                <div class="h-full bg-gradient-to-r from-sky-500 via-sky-400 to-amber-300 sig-progress-bar transition-all duration-500" style="width: 42.7%"></div>
               </div>
               <div class="mt-2 flex items-center justify-between text-[11px] text-sky-200/80">
-                <span>✓ 24 Municípios de SC atingidos</span>
-                <span>✓ Exibição pública apenas por iniciais</span>
+                <span>✓ 24 Municípios de SC participando</span>
+                <span>✓ Validação única por CPF</span>
               </div>
             </div>
 
             <!-- Resumo das 5 Pautas -->
-            <div class="text-xs font-bold uppercase tracking-wider text-[#f7d117] mb-2">
-              ✊ Os 5 Punhos da Nossa Luta em SC:
+            <div class="text-xs font-bold uppercase tracking-wider text-sky-300 mb-2.5">
+              ✊ Nossas 5 Pautas Principais:
             </div>
             <ul class="space-y-2 text-xs sm:text-sm text-slate-100 mb-6">
-              <li class="flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-[#e61919] text-white font-bold text-xs flex items-center justify-center shrink-0">1</span> <span><strong>Reajuste Digno</strong> das diárias e remuneração;</span></li>
-              <li class="flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-[#e61919] text-white font-bold text-xs flex items-center justify-center shrink-0">2</span> <span><strong>Redução de Carga Horária</strong> sem redução salarial;</span></li>
-              <li class="flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-[#e61919] text-white font-bold text-xs flex items-center justify-center shrink-0">3</span> <span><strong>Guarda-Vidas o Ano Inteiro</strong> nas praias;</span></li>
-              <li class="flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-[#e61919] text-white font-bold text-xs flex items-center justify-center shrink-0">4</span> <span><strong>Contratação Digna</strong> (fim do "voluntariado" precário);</span></li>
-              <li class="flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-[#e61919] text-white font-bold text-xs flex items-center justify-center shrink-0">5</span> <span><strong>Plano de Carreira</strong> para os guarda-vidas.</span></li>
+              <li class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-sky-500/25 border border-sky-400/50 text-sky-200 font-bold text-xs flex items-center justify-center shrink-0">1</span> <span><strong>Reajuste Digno</strong> das diárias e remuneração;</span></li>
+              <li class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-sky-500/25 border border-sky-400/50 text-sky-200 font-bold text-xs flex items-center justify-center shrink-0">2</span> <span><strong>Redução de Carga Horária</strong> sem redução salarial;</span></li>
+              <li class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-sky-500/25 border border-sky-400/50 text-sky-200 font-bold text-xs flex items-center justify-center shrink-0">3</span> <span><strong>Guarda-Vidas o Ano Inteiro</strong> nas praias;</span></li>
+              <li class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-sky-500/25 border border-sky-400/50 text-sky-200 font-bold text-xs flex items-center justify-center shrink-0">4</span> <span><strong>Contratação Digna</strong> (fim do "voluntariado" precário);</span></li>
+              <li class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-sky-500/25 border border-sky-400/50 text-sky-200 font-bold text-xs flex items-center justify-center shrink-0">5</span> <span><strong>Plano de Carreira</strong> para os guarda-vidas.</span></li>
             </ul>
 
-            <button onclick="switchScreen('peticao')" class="w-full py-4 rounded-xl bg-[#e61919] hover:bg-red-500 text-white font-extrabold text-base uppercase tracking-wide shadow-lg shadow-red-600/40 border-2 border-[#f7d117] transition-all">
-              Assinar Agora Sem Me Expor →
+            <button onclick="switchScreen('peticao')" class="w-full py-4 rounded-xl btn-friendly-gold font-extrabold text-base uppercase tracking-wide">
+              Assinar a Petição Agora →
             </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO EDUCATIVA E OPERACIONAL: A BANDEIRA VERMELHA E A MARÉ DE RETORNO -->
+    <section class="py-12 px-4 sm:px-6 bg-[#081933] border-b border-slate-800">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-5 relative rounded-2xl overflow-hidden border border-slate-700 shadow-xl">
+            <img src="assets/img/post4.jpg" alt="Guarda-Vidas fincando a Bandeira Vermelha de corrente de retorno na praia"
+              class="w-full h-80 sm:h-96 object-cover object-center" />
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent p-4">
+              <span class="px-2.5 py-0.5 rounded bg-red-600 text-white text-[11px] font-bold uppercase">Prevenção Diária na Areia</span>
+              <p class="text-xs text-slate-200 mt-1">Guarda-vidas posicionando a Bandeira Vermelha para demarcar a corrente de retorno em Florianópolis.</p>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/15 border border-red-500/30 text-red-300 text-xs font-bold uppercase">
+              <span>🚩 Entenda o Trabalho do Guarda-Vidas</span>
+            </div>
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-white uppercase">
+              A Bandeira Vermelha e o Perigo Invisível da Maré de Retorno
+            </h2>
+            <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+              Para quem olha da areia, o local onde as ondas <strong>não estão quebrando</strong> parece uma "piscina calma". Na verdade, é ali que atua a <strong>maré de retorno (corrente de retorno)</strong>: uma vala profunda que puxa rapidamente o banhista para o mar aberto.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div class="p-4 rounded-xl bg-[#061326] border border-red-500/30">
+                <div class="font-bold text-red-400 text-sm mb-1 flex items-center gap-2">
+                  <span>🚩</span> <span>Com Guarda-Vidas na Praia</span>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  O GVC lê a formação dos bancos de areia a cada mudança de maré, finca a <strong>Bandeira Vermelha</strong> exatamente em frente à corrente de retorno e orienta preventivamente os banhistas com o apito antes que o afogamento aconteça.
+                </p>
+              </div>
+              <div class="p-4 rounded-xl bg-[#061326] border border-slate-700">
+                <div class="font-bold text-amber-300 text-sm mb-1 flex items-center gap-2">
+                  <span>⚠️</span> <span>Praia Sem GVC Fora de Temporada</span>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  Quando os postos são fechados no outono, inverno e primavera, <strong>ninguém demarca as correntes de retorno com a bandeira vermelha</strong>. Famílias, turistas e surfistas entram no canal de retorno sem nenhum aviso.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -208,57 +271,47 @@
       <div class="max-w-7xl mx-auto">
         <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
           <div>
-            <span class="text-xs font-bold uppercase tracking-widest text-[#f7d117]">Engine de Notícias & Publicações • asafgv.com</span>
+            <span class="text-xs font-bold uppercase tracking-widest text-sky-400">Notícias & Publicações • asafgv.com</span>
             <h2 class="font-display text-3xl sm:text-4xl font-bold text-white uppercase mt-1">
-              Últimas Publicações e Mobilização em SC
+              Acompanhe as Ações da A.S.A.F. em Santa Catarina
             </h2>
           </div>
           <button onclick="switchScreen('guardavidas'); setRoleView('admin');" class="text-xs font-bold text-sky-300 hover:text-white underline">
-            + Publicar Notícia no Painel Admin →
+            + Gerenciar Publicações no Painel Admin →
           </button>
         </div>
 
         <div id="public-news-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10"></div>
 
         <!-- Galeria do Instagram @asaf.gv -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          <div class="bg-[#091b36] border border-slate-700/80 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-[#f7d117] transition-all">
-            <div class="aspect-[4/5] overflow-hidden bg-slate-950">
-              <img src="assets/img/post4.jpg" alt="Post ASAF - Chegou a Primavera" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+          <div class="bg-[#091b36] border border-slate-700/80 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-sky-400/60 transition-all">
+            <div class="aspect-[4/4] overflow-hidden bg-slate-950">
+              <img src="assets/img/post5.jpg" alt="Post ASAF - Praia lotada e posto fechado" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
             </div>
             <div class="p-4">
-              <span class="text-[11px] font-bold uppercase text-[#f7d117]">Alerta de Meia-Estação</span>
-              <p class="text-xs text-slate-200 mt-1">Com o calor, as praias voltam a encher, mas a maioria dos postos segue desativada.</p>
+              <span class="text-[11px] font-bold uppercase text-amber-300">Realidade nas Praias</span>
+              <p class="text-xs text-slate-200 mt-1">Praia cheia de banhistas em dia de sol fora da temporada e posto de salvamento desativado.</p>
             </div>
           </div>
 
-          <div class="bg-[#091b36] border border-slate-700/80 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-[#f7d117] transition-all">
-            <div class="aspect-[4/5] overflow-hidden bg-slate-950">
-              <img src="assets/img/post5.jpg" alt="Post ASAF - Praia lotada e posto com bandeira preta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-            </div>
-            <div class="p-4">
-              <span class="text-[11px] font-bold uppercase text-red-400">Flagrante nas Praias</span>
-              <p class="text-xs text-slate-200 mt-1">Praia lotada de banhistas e posto de salvamento fechado com bandeira preta fora da alta temporada.</p>
-            </div>
-          </div>
-
-          <div class="bg-[#091b36] border border-slate-700/80 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-[#f7d117] transition-all">
-            <div class="aspect-[4/5] overflow-hidden bg-slate-950">
+          <div class="bg-[#091b36] border border-slate-700/80 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-sky-400/60 transition-all">
+            <div class="aspect-[4/4] overflow-hidden bg-slate-950">
               <img src="assets/img/post3.jpg" alt="Post ASAF - Aviso sobre afogamentos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
             </div>
             <div class="p-4">
-              <span class="text-[11px] font-bold uppercase text-[#f7d117]">Urgência de Efetivo</span>
+              <span class="text-[11px] font-bold uppercase text-sky-300">Prevenção o Ano Todo</span>
               <p class="text-xs text-slate-200 mt-1">Pela ampliação imediata do período e do efetivo de salvamento aquático em todo o nosso litoral.</p>
             </div>
           </div>
 
-          <div class="bg-[#091b36] border border-slate-700/80 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-[#f7d117] transition-all">
-            <div class="aspect-[4/5] overflow-hidden bg-slate-950">
+          <div class="bg-[#091b36] border border-slate-700/80 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-sky-400/60 transition-all">
+            <div class="aspect-[4/4] overflow-hidden bg-slate-950">
               <img src="assets/img/post1.jpg" alt="Post ASAF - Em luta por Guarda-Vidas Permanentes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
             </div>
             <div class="p-4">
-              <span class="text-[11px] font-bold uppercase text-red-400">Pauta Permanente</span>
-              <p class="text-xs text-slate-200 mt-1">"Em luta por Guarda-Vidas Permanentes": a união entre surfistas, moradores e guarda-vidas pela vida.</p>
+              <span class="text-[11px] font-bold uppercase text-amber-300">União Pela Vida</span>
+              <p class="text-xs text-slate-200 mt-1">"Em luta por Guarda-Vidas Permanentes": a união entre surfistas, moradores e guarda-vidas.</p>
             </div>
           </div>
         </div>
@@ -268,110 +321,110 @@
     <!-- SEÇÃO: AS 5 PAUTAS REIVINDICATÓRIAS DA ASAF -->
     <section class="py-16 px-4 sm:px-6 max-w-7xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="text-xs font-bold uppercase tracking-widest text-[#f7d117]">5 Punhos Erguidos no Mar • Pauta Municipal e Estadual</span>
+        <span class="text-xs font-bold uppercase tracking-widest text-sky-400">5 Punhos Erguidos no Mar • Pauta Municipal e Estadual</span>
         <h2 class="font-display text-3xl sm:text-4xl font-bold text-white uppercase mt-1">
           As 5 Pautas Oficiais da A.S.A.F.
         </h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-[#0a1e3c]/80 border-2 border-slate-800 hover:border-[#f7d117] rounded-2xl p-6 transition-all flex flex-col justify-between shadow-lg">
+        <div class="bg-[#0a1e3c]/80 border border-slate-700/80 hover:border-sky-400/60 rounded-2xl p-6 transition-all flex flex-col justify-between shadow-lg">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="w-11 h-11 rounded-xl bg-[#e61919] border-2 border-[#f7d117] text-white font-display font-bold text-xl flex items-center justify-center">01</span>
-              <span class="text-xs px-2.5 py-1 rounded bg-[#061326] text-[#f7d117] border border-[#f7d117]/30 font-semibold">Valorização Financeira</span>
+              <span class="w-11 h-11 rounded-xl bg-sky-500/20 border border-sky-400/40 text-sky-300 font-display font-bold text-xl flex items-center justify-center">01</span>
+              <span class="text-xs px-2.5 py-1 rounded bg-[#061326] text-sky-300 border border-sky-400/20 font-semibold">Valorização Financeira</span>
             </div>
             <h3 class="font-display text-xl font-bold text-white uppercase mb-2">Reajuste Digno Já</h3>
             <p class="text-sm text-slate-200 leading-relaxed mb-4">
-              Atualização real dos valores pagos aos Guarda-Vidas Civis em Santa Catarina, hoje corroídos pela inflação e incompatíveis com o custo de vida no litoral e o risco extremo da atividade.
+              Atualização real dos valores pagos aos Guarda-Vidas Civis em Santa Catarina, hoje corroídos pela inflação e incompatíveis com o custo de vida no litoral e o risco da atividade.
             </p>
           </div>
-          <div class="pt-3 border-t border-slate-700/80 text-xs text-[#f7d117] font-semibold">
+          <div class="pt-3 border-t border-slate-700/80 text-xs text-amber-300 font-semibold">
             ✓ Recomposição inflacionária + valorização real do turno trabalhado.
           </div>
         </div>
 
-        <div class="bg-[#0a1e3c]/80 border-2 border-slate-800 hover:border-[#f7d117] rounded-2xl p-6 transition-all flex flex-col justify-between shadow-lg">
+        <div class="bg-[#0a1e3c]/80 border border-slate-700/80 hover:border-sky-400/60 rounded-2xl p-6 transition-all flex flex-col justify-between shadow-lg">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="w-11 h-11 rounded-xl bg-[#e61919] border-2 border-[#f7d117] text-white font-display font-bold text-xl flex items-center justify-center">02</span>
-              <span class="text-xs px-2.5 py-1 rounded bg-[#061326] text-[#f7d117] border border-[#f7d117]/30 font-semibold">Saúde & Prontidão</span>
+              <span class="w-11 h-11 rounded-xl bg-sky-500/20 border border-sky-400/40 text-sky-300 font-display font-bold text-xl flex items-center justify-center">02</span>
+              <span class="text-xs px-2.5 py-1 rounded bg-[#061326] text-sky-300 border border-sky-400/20 font-semibold">Saúde & Prontidão</span>
             </div>
             <h3 class="font-display text-xl font-bold text-white uppercase mb-2">Redução de Carga Horária sem Redução de Salário</h3>
             <p class="text-sm text-slate-200 leading-relaxed mb-4">
               Escalas extenuantes de <strong>9h a 12h diárias</strong> sob insolação severa geram exaustão física extrema. Defendemos turnos humanizados de 6h sem nenhuma perda salarial/diária.
             </p>
           </div>
-          <div class="pt-3 border-t border-slate-700/80 text-xs text-[#f7d117] font-semibold">
+          <div class="pt-3 border-t border-slate-700/80 text-xs text-amber-300 font-semibold">
             ✓ Turnos seguros (6h) mantendo 100% da remuneração.
           </div>
         </div>
 
-        <div class="bg-[#0a1e3c]/80 border-2 border-slate-800 hover:border-[#f7d117] rounded-2xl p-6 transition-all flex flex-col justify-between shadow-lg">
+        <div class="bg-[#0a1e3c]/80 border border-slate-700/80 hover:border-sky-400/60 rounded-2xl p-6 transition-all flex flex-col justify-between shadow-lg">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="w-11 h-11 rounded-xl bg-[#e61919] border-2 border-[#f7d117] text-white font-display font-bold text-xl flex items-center justify-center">03</span>
-              <span class="text-xs px-2.5 py-1 rounded bg-red-600/30 text-red-200 border border-red-400/40 font-semibold">Vidas o Ano Todo</span>
+              <span class="w-11 h-11 rounded-xl bg-sky-500/20 border border-sky-400/40 text-sky-300 font-display font-bold text-xl flex items-center justify-center">03</span>
+              <span class="text-xs px-2.5 py-1 rounded bg-[#061326] text-amber-300 border border-amber-400/30 font-semibold">Vidas o Ano Todo</span>
             </div>
             <h3 class="font-display text-xl font-bold text-white uppercase mb-2">Guarda-Vidas o Ano Inteiro</h3>
             <p class="text-sm text-slate-200 leading-relaxed mb-4">
-              Florianópolis e o litoral de SC recebem surfistas, moradores e turistas de janeiro a janeiro. Fechar mais de 90% dos postos fora do verão expõe vidas ao afogamento.
+              Florianópolis e o litoral de SC recebem surfistas, moradores e turistas de janeiro a janeiro. Manter postos ativos garante sinalização das correntes de retorno e resgate rápido o ano todo.
             </p>
           </div>
-          <div class="pt-3 border-t border-slate-700/80 text-xs text-[#f7d117] font-semibold">
+          <div class="pt-3 border-t border-slate-700/80 text-xs text-amber-300 font-semibold">
             ✓ Postos de salvamento ativos durante os 12 meses do ano.
           </div>
         </div>
 
-        <div class="bg-[#0a1e3c]/80 border-2 border-slate-800 hover:border-[#f7d117] rounded-2xl p-6 transition-all flex flex-col justify-between shadow-lg">
+        <div class="bg-[#0a1e3c]/80 border border-slate-700/80 hover:border-sky-400/60 rounded-2xl p-6 transition-all flex flex-col justify-between shadow-lg">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="w-11 h-11 rounded-xl bg-[#e61919] border-2 border-[#f7d117] text-white font-display font-bold text-xl flex items-center justify-center">04</span>
-              <span class="text-xs px-2.5 py-1 rounded bg-[#061326] text-[#f7d117] border border-[#f7d117]/30 font-semibold">Fim do Sucateamento</span>
+              <span class="w-11 h-11 rounded-xl bg-sky-500/20 border border-sky-400/40 text-sky-300 font-display font-bold text-xl flex items-center justify-center">04</span>
+              <span class="text-xs px-2.5 py-1 rounded bg-[#061326] text-sky-300 border border-sky-400/20 font-semibold">Fim do Sucateamento</span>
             </div>
             <h3 class="font-display text-xl font-bold text-white uppercase mb-2">Contratação Digna</h3>
             <p class="text-sm text-slate-200 leading-relaxed mb-4">
               Superação do modelo precário de "voluntariado" (Lei Estadual nº 13.880/2006) que nega FGTS, 13º salário, férias e amparo previdenciário adequado a quem arrisca a vida no mar.
             </p>
           </div>
-          <div class="pt-3 border-t border-slate-700/80 text-xs text-[#f7d117] font-semibold">
+          <div class="pt-3 border-t border-slate-700/80 text-xs text-amber-300 font-semibold">
             ✓ Vínculo formal digno, direitos trabalhistas e EPIs estruturados.
           </div>
         </div>
 
-        <div class="bg-[#0a1e3c]/80 border-2 border-slate-800 hover:border-[#f7d117] rounded-2xl p-6 transition-all flex flex-col justify-between shadow-lg">
+        <div class="bg-[#0a1e3c]/80 border border-slate-700/80 hover:border-sky-400/60 rounded-2xl p-6 transition-all flex flex-col justify-between shadow-lg">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="w-11 h-11 rounded-xl bg-[#e61919] border-2 border-[#f7d117] text-white font-display font-bold text-xl flex items-center justify-center">05</span>
-              <span class="text-xs px-2.5 py-1 rounded bg-[#061326] text-[#f7d117] border border-[#f7d117]/30 font-semibold">Futuro Profissional</span>
+              <span class="w-11 h-11 rounded-xl bg-sky-500/20 border border-sky-400/40 text-sky-300 font-display font-bold text-xl flex items-center justify-center">05</span>
+              <span class="text-xs px-2.5 py-1 rounded bg-[#061326] text-sky-300 border border-sky-400/20 font-semibold">Futuro Profissional</span>
             </div>
             <h3 class="font-display text-xl font-bold text-white uppercase mb-2">Plano de Carreira</h3>
             <p class="text-sm text-slate-200 leading-relaxed mb-4">
               Reconhecimento das temporadas trabalhadas, recertificações e experiência acumulada pelos guarda-vidas no litoral catarinense.
             </p>
           </div>
-          <div class="pt-3 border-t border-slate-700/80 text-xs text-[#f7d117] font-semibold">
+          <div class="pt-3 border-t border-slate-700/80 text-xs text-amber-300 font-semibold">
             ✓ Progressão por tempo de serviço e qualificação técnica.
           </div>
         </div>
 
-        <div class="bg-gradient-to-br from-[#e61919]/30 via-[#0a1e3c] to-[#061326] border-2 border-[#f7d117] rounded-2xl p-6 flex flex-col justify-between">
+        <div class="bg-gradient-to-br from-sky-900/40 via-[#0a1e3c] to-[#061326] border border-sky-400/40 rounded-2xl p-6 flex flex-col justify-between">
           <div class="flex items-center gap-3 mb-3">
             <img src="assets/img/logo-asaf.png" alt="Logo ASAF" class="w-14 h-14 object-contain shrink-0" />
             <div>
-              <span class="inline-block px-2.5 py-0.5 rounded bg-[#f7d117] text-slate-950 font-extrabold text-[11px] uppercase">
-                Portal asafgv.com
+              <span class="inline-block px-2.5 py-0.5 rounded bg-sky-500/20 border border-sky-400/40 text-sky-200 font-bold text-[11px] uppercase">
+                Comunidade & Categoria
               </span>
               <h3 class="font-display text-lg font-bold text-white uppercase mt-1">
-                Banhistas, GVCs e Bombeiros
+                Portal Integrado asafgv.com
               </h3>
             </div>
           </div>
           <p class="text-sm text-slate-100 leading-relaxed mb-4">
-            Acesse o portal para indicar falta de guarda-vidas na sua praia, enviar dúvidas ou interagir no mural interno da categoria.
+            Banhistas podem tirar dúvidas sobre correntes de retorno e indicar praias sem cobertura; GVCs contam com mural interno e agenda da associação.
           </p>
-          <button onclick="switchScreen('guardavidas')" class="w-full py-3 rounded-xl bg-[#f7d117] hover:bg-yellow-300 text-slate-950 font-extrabold text-sm uppercase transition-all shadow-lg">
-            Abrir Portal de Perfis (Banhista / GVC / Admin) →
+          <button onclick="switchScreen('guardavidas')" class="w-full py-3 rounded-xl btn-friendly-primary font-extrabold text-sm uppercase">
+            Acessar Portal (Banhista / GVC / Admin) →
           </button>
         </div>
       </div>
@@ -382,15 +435,15 @@
       <div class="max-w-7xl mx-auto">
         <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
           <div>
-            <span class="text-xs font-bold uppercase tracking-widest text-[#f7d117]">Raio-X Estadual de Cobertura (Florianópolis & Litoral SC)</span>
+            <span class="text-xs font-bold uppercase tracking-widest text-sky-400">Raio-X Estadual de Cobertura (Florianópolis & Litoral SC)</span>
             <h2 class="font-display text-3xl sm:text-4xl font-bold text-white uppercase mt-1">
-              O Abandono das Praias Fora da Temporada
+              Situação dos Postos e Sinalização nas Praias
             </h2>
           </div>
 
           <div class="flex flex-wrap gap-2">
             <button id="btn-season-inverno" onclick="setSeasonMode('inverno')">
-              🚨 Fora de Temporada (Hoje)
+              🚩 Fora de Temporada (Hoje)
             </button>
             <button id="btn-season-verao" onclick="setSeasonMode('verao')">
               ☀️ Alta Temporada (Verão)
@@ -406,19 +459,19 @@
       </div>
     </section>
 
-    <!-- SEÇÃO: MURAL PÚBLICO DE APOIADORES (EXIBINDO APENAS INICIAIS) -->
+    <!-- SEÇÃO: MURAL PÚBLICO DE APOIADORES -->
     <section class="py-16 px-4 sm:px-6 max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         <div class="lg:col-span-5 space-y-4">
-          <span class="text-xs font-bold uppercase tracking-widest text-emerald-400">Sigilo Público Absoluto • LGPD</span>
+          <span class="text-xs font-bold uppercase tracking-widest text-sky-400">Mobilização em Tempo Real</span>
           <h3 class="font-display text-3xl font-bold text-white uppercase">
-            Apoiadores Verificados (Exibição por Iniciais)
+            Últimas Assinaturas em Santa Catarina
           </h3>
           <p class="text-sm text-slate-300 leading-relaxed">
-            Para evitar qualquer exposição ou represália contra guarda-vidas e cidadãos, o site <strong>asafgv.com</strong> exibe publicamente <strong>somente as iniciais do nome</strong>. O nome completo e o CPF ficam criptografados exclusivamente para o documento oficial de protocolo junto à ALESC, Governo de SC e Ministério Público.
+            Moradores, banhistas, surfistas, guarda-vidas civis e bombeiros militares de todas as regiões de Santa Catarina juntos pelas 5 pautas da A.S.A.F.
           </p>
-          <button onclick="switchScreen('peticao')" class="w-full py-3.5 rounded-xl bg-[#e61919] hover:bg-red-500 text-white font-extrabold text-sm uppercase border-2 border-[#f7d117] transition-all">
-            Assinar Agora Com Iniciais Protegidas →
+          <button onclick="switchScreen('peticao')" class="w-full py-3.5 rounded-xl btn-friendly-primary font-extrabold text-sm uppercase">
+            Participar e Assinar a Petição →
           </button>
         </div>
 
@@ -430,7 +483,7 @@
   </main>
 
   <!-- ===================================================================== -->
-  <!-- TELA 2: FORMULÁRIO DE ASSINATURA COM SIGILO PÚBLICO (INICIAIS)        -->
+  <!-- TELA 2: FORMULÁRIO DE ASSINATURA DA PETIÇÃO                           -->
   <!-- ===================================================================== -->
   <section id="screen-peticao" class="screen-view flex-1 py-12 px-4 sm:px-6">
     <div class="max-w-4xl mx-auto">
@@ -438,33 +491,22 @@
         ← Voltar para a Página Inicial
       </button>
 
-      <div class="bg-[#091b36] border-2 border-[#f7d117] rounded-2xl overflow-hidden shadow-2xl">
-        <div class="h-2 rescue-stripes"></div>
+      <div class="bg-[#091b36] border border-sky-400/40 rounded-2xl overflow-hidden shadow-2xl">
+        <div class="h-1.5 rescue-stripes"></div>
         <div class="p-6 sm:p-10">
           <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
             <div class="flex items-center gap-3.5">
               <img src="assets/img/logo-asaf.png" alt="Logo ASAF" class="w-16 h-16 object-contain shrink-0" />
               <div>
-                <span class="px-2.5 py-0.5 rounded bg-[#e61919] text-white text-[11px] font-bold uppercase">
+                <span class="px-2.5 py-0.5 rounded bg-sky-500/20 text-sky-300 border border-sky-400/30 text-[11px] font-bold uppercase">
                   Mobilização Estadual SC & Municipal • asafgv.com
                 </span>
                 <h2 class="font-display text-2xl sm:text-3xl font-bold text-white uppercase mt-1">
-                  Assine a Petição Oficial Sem Se Expor no Site
+                  Assinar a Petição Oficial da A.S.A.F.
                 </h2>
               </div>
             </div>
-            <span class="text-xs text-emerald-400 font-semibold bg-slate-950/70 px-3 py-1.5 rounded-lg border border-emerald-500/30">🔒 Apenas Iniciais no Site</span>
-          </div>
-
-          <!-- Destaque de Privacidade por Iniciais -->
-          <div class="mb-6 p-4 rounded-xl bg-emerald-950/50 border border-emerald-500/40 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <div class="text-xs sm:text-sm text-emerald-100">
-              <strong>🛡️ Como sua privacidade é protegida:</strong> Seu nome completo e CPF são criptografados para validar o <strong>Documento Oficial entregue às autoridades</strong>, mas no site público aparecerão <strong>somente suas iniciais</strong>:
-            </div>
-            <div class="px-4 py-2 rounded-xl bg-[#061326] border border-emerald-400/50 text-center shrink-0">
-              <div class="text-[10px] uppercase text-slate-400">Prévia Pública no Site:</div>
-              <div id="initials-preview-badge" class="font-mono font-extrabold text-base text-[#f7d117]">J. C. S.</div>
-            </div>
+            <span class="text-xs text-emerald-400 font-semibold bg-slate-950/70 px-3 py-1.5 rounded-lg border border-emerald-500/30">🔒 Protegido pela LGPD</span>
           </div>
 
           <div id="pet-error-box" class="hidden mb-6 p-4 rounded-xl bg-red-950 border border-red-500 text-red-200 text-sm font-medium"></div>
@@ -473,23 +515,23 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
                 <label for="pet-name" class="block text-xs font-bold uppercase tracking-wider text-slate-200 mb-1.5">
-                  Nome Completo (Restrito ao Documento Oficial) *
+                  Nome Completo *
                 </label>
                 <input id="pet-name" type="text" required placeholder="Ex: João Carlos da Silva"
-                  class="w-full px-4 py-3 rounded-xl bg-[#061326] border border-slate-700 text-white text-sm focus:border-[#f7d117] focus:outline-none" />
+                  class="w-full px-4 py-3 rounded-xl bg-[#061326] border border-slate-700 text-white text-sm focus:border-sky-400 focus:outline-none" />
               </div>
 
               <div>
                 <div class="flex items-center justify-between mb-1.5">
                   <label for="pet-cpf" class="block text-xs font-bold uppercase tracking-wider text-slate-200">
-                    CPF (Validação Única Criptografada) *
+                    CPF *
                   </label>
-                  <button type="button" onclick="preencherCPFTeste()" class="text-[11px] text-[#f7d117] hover:underline font-bold">
+                  <button type="button" onclick="preencherCPFTeste()" class="text-[11px] text-sky-300 hover:underline font-bold">
                     ⚡ Gerar CPF de Teste
                   </button>
                 </div>
                 <input id="pet-cpf" type="text" required placeholder="000.000.000-00" maxlength="14"
-                  class="w-full px-4 py-3 rounded-xl bg-[#061326] border border-slate-700 text-white text-sm focus:border-[#f7d117] focus:outline-none font-mono" />
+                  class="w-full px-4 py-3 rounded-xl bg-[#061326] border border-slate-700 text-white text-sm focus:border-sky-400 focus:outline-none font-mono" />
                 <div id="cpf-feedback" class="mt-1"></div>
               </div>
             </div>
@@ -497,18 +539,18 @@
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
               <div>
                 <label for="pet-contact" class="block text-xs font-bold uppercase tracking-wider text-slate-200 mb-1.5">
-                  WhatsApp ou E-mail (p/ Código) *
+                  WhatsApp ou E-mail *
                 </label>
                 <input id="pet-contact" type="text" required placeholder="(48) 99999-9999"
-                  class="w-full px-4 py-3 rounded-xl bg-[#061326] border border-slate-700 text-white text-sm focus:border-[#f7d117] focus:outline-none" />
+                  class="w-full px-4 py-3 rounded-xl bg-[#061326] border border-slate-700 text-white text-sm focus:border-sky-400 focus:outline-none" />
               </div>
 
               <div>
                 <label for="pet-city" class="block text-xs font-bold uppercase tracking-wider text-slate-200 mb-1.5">
-                  Município de SC (Ou Outro Estado) *
+                  Município / UF *
                 </label>
                 <input id="pet-city" list="sc-cities-list" type="text" required value="Florianópolis - SC"
-                  class="w-full px-4 py-3 rounded-xl bg-[#061326] border border-slate-700 text-white text-sm focus:border-[#f7d117] focus:outline-none" />
+                  class="w-full px-4 py-3 rounded-xl bg-[#061326] border border-slate-700 text-white text-sm focus:border-sky-400 focus:outline-none" />
                 <datalist id="sc-cities-list">
                   <option value="Florianópolis - SC"></option>
                   <option value="Balneário Camboriú - SC"></option>
@@ -530,44 +572,32 @@
 
               <div>
                 <label for="pet-neighborhood" class="block text-xs font-bold uppercase tracking-wider text-slate-200 mb-1.5">
-                  Bairro / Praia de Referência *
+                  Bairro / Praia *
                 </label>
                 <input id="pet-neighborhood" type="text" required placeholder="Ex: Campeche, Ingleses, Centro..."
-                  class="w-full px-4 py-3 rounded-xl bg-[#061326] border border-slate-700 text-white text-sm focus:border-[#f7d117] focus:outline-none" />
+                  class="w-full px-4 py-3 rounded-xl bg-[#061326] border border-slate-700 text-white text-sm focus:border-sky-400 focus:outline-none" />
               </div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div>
-                <label for="pet-profile" class="block text-xs font-bold uppercase tracking-wider text-slate-200 mb-1.5">
-                  Seu Perfil na Mobilização *
-                </label>
-                <select id="pet-profile" class="w-full px-4 py-3 rounded-xl bg-[#061326] border border-slate-700 text-white text-sm focus:border-[#f7d117] focus:outline-none">
-                  <option value="Banhista / Morador / Cidadão">🏖️ Banhista / Morador / Cidadão</option>
-                  <option value="Guarda-Vidas Civil (GVC)">🛟 Guarda-Vidas Civil Voluntário (GVC)</option>
-                  <option value="Bombeiro Militar (CBMSC)">🚒 Bombeiro Militar (CBMSC)</option>
-                  <option value="Surfista / Atleta Aquático">🏄 Surfista / Atleta Aquático</option>
-                  <option value="Comerciante / Turismo SC">🏪 Comerciante / Trabalhador do Turismo</option>
-                </select>
-              </div>
-
-              <div>
-                <label for="pet-privacy-mode" class="block text-xs font-bold uppercase tracking-wider text-emerald-400 mb-1.5">
-                  Modo de Exibição no Site Público (Anti-Exposição) *
-                </label>
-                <select id="pet-privacy-mode" class="w-full px-4 py-3 rounded-xl bg-[#061326] border border-emerald-500/50 text-white text-sm focus:border-[#f7d117] focus:outline-none">
-                  <option value="initials">🔒 Mostrar SOMENTE minhas iniciais no site (Ex: J. C. S.)</option>
-                  <option value="anonymous_initials">🛡️ Mostrar "Sigiloso + Iniciais" no site (Proteção máxima GVC)</option>
-                </select>
-              </div>
+            <div>
+              <label for="pet-profile" class="block text-xs font-bold uppercase tracking-wider text-slate-200 mb-1.5">
+                Seu Vínculo com as Praias *
+              </label>
+              <select id="pet-profile" class="w-full px-4 py-3 rounded-xl bg-[#061326] border border-slate-700 text-white text-sm focus:border-sky-400 focus:outline-none">
+                <option value="Banhista / Morador">🏖️ Banhista / Morador / Cidadão</option>
+                <option value="Guarda-Vidas Civil (GVC)">🛟 Guarda-Vidas Civil Voluntário (GVC)</option>
+                <option value="Bombeiro Militar (CBMSC)">🚒 Bombeiro Militar (CBMSC)</option>
+                <option value="Surfista / Atleta Aquático">🏄 Surfista / Atleta Aquático</option>
+                <option value="Comerciante / Turismo SC">🏪 Comerciante / Trabalhador do Turismo</option>
+              </select>
             </div>
 
             <!-- Opção Expansível: Iniciativa Popular Formal (Lei Estadual SC 16.585/2015) -->
             <div class="p-4 rounded-xl bg-[#061326] border border-slate-800">
               <label class="flex items-start gap-3 cursor-pointer">
-                <input id="toggle-titulo-eleitor" type="checkbox" class="mt-1 w-4 h-4 accent-red-600 rounded" />
+                <input id="toggle-titulo-eleitor" type="checkbox" class="mt-1 w-4 h-4 accent-sky-500 rounded" />
                 <span class="text-xs sm:text-sm text-slate-300">
-                  <strong>Opcional — Iniciativa Popular Estadual (Lei Estadual SC nº 16.585/2015):</strong> Informar também Título de Eleitor e Filiação (também mantidos em sigilo absoluto fora do site público).
+                  <strong>Opcional — Iniciativa Popular Estadual (Lei Estadual SC nº 16.585/2015):</strong> Informar também Título de Eleitor e Filiação.
                 </span>
               </label>
 
@@ -578,25 +608,25 @@
                     class="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-white text-xs font-mono" />
                 </div>
                 <div>
-                  <label class="block text-xs font-semibold text-slate-400 mb-1">Nome da Mãe ou Pai (Filiação exigida na Lei 16.585/15)</label>
+                  <label class="block text-xs font-semibold text-slate-400 mb-1">Nome da Mãe ou Pai</label>
                   <input type="text" placeholder="Nome completo da mãe ou do pai"
                     class="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-white text-xs" />
                 </div>
               </div>
             </div>
 
-            <!-- Termos LGPD -->
+            <!-- Termos LGPD discretos -->
             <div class="space-y-3 pt-2">
               <label class="flex items-start gap-3 cursor-pointer p-3.5 rounded-xl bg-[#061326] border border-slate-800 hover:border-slate-700">
-                <input id="pet-lgpd" type="checkbox" required checked class="mt-1 w-4 h-4 accent-red-600 rounded shrink-0" />
+                <input id="pet-lgpd" type="checkbox" required checked class="mt-1 w-4 h-4 accent-sky-500 rounded shrink-0" />
                 <span class="text-xs text-slate-300 leading-relaxed">
-                  <strong>Termo de Consentimento e Sigilo Público (LGPD - Lei 13.709/2018): *</strong> Autorizo a A.S.A.F. (`asafgv.com`) a incluir minha assinatura no documento oficial entregue à ALESC, Governo de SC, Prefeituras/Câmaras e Ministério Público, mantendo no site público <strong>apenas as minhas iniciais</strong>.
+                  <strong>Termo de Consentimento (LGPD - Lei 13.709/2018): *</strong> Autorizo a A.S.A.F. (`asafgv.com`) a incluir minha assinatura no documento oficial entregue à ALESC, Governo de SC, Prefeituras/Câmaras e Ministério Público (no mural do site são exibidas apenas as iniciais do nome).
                 </span>
               </label>
             </div>
 
-            <button type="submit" class="w-full py-4 rounded-xl bg-[#e61919] hover:bg-red-500 text-white font-extrabold text-base uppercase tracking-wide shadow-xl shadow-red-600/30 border-2 border-[#f7d117] transition-all">
-              Confirmar Assinatura com Identidade Protegida →
+            <button type="submit" class="w-full py-4 rounded-xl btn-friendly-primary font-extrabold text-base uppercase tracking-wide">
+              Confirmar Minha Assinatura →
             </button>
           </form>
         </div>
@@ -605,36 +635,36 @@
 
     <!-- MODAL DE VERIFICAÇÃO EM 2 ETAPAS -->
     <div id="otp-modal" class="hidden fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-sm flex items-center justify-center p-4">
-      <div class="bg-[#091b36] border-2 border-[#f7d117] rounded-2xl max-w-md w-full p-6 shadow-2xl space-y-4">
+      <div class="bg-[#091b36] border border-sky-400/50 rounded-2xl max-w-md w-full p-6 shadow-2xl space-y-4">
         <div class="flex items-center justify-between">
-          <span class="px-2.5 py-1 rounded bg-[#f7d117] text-slate-950 font-extrabold text-xs uppercase">Verificação Antifraude (Lei 14.063/2020)</span>
+          <span class="px-2.5 py-1 rounded bg-sky-500/20 text-sky-300 font-bold text-xs uppercase">Confirmação Rápida</span>
           <button onclick="fecharModalOTP()" class="text-slate-400 hover:text-white text-sm">✕</button>
         </div>
         <h3 class="font-display text-2xl font-bold text-white uppercase">Confirme Seu Código</h3>
         <p class="text-xs sm:text-sm text-slate-200">
-          Enviamos um código de 6 dígitos para <strong id="otp-contact-display" class="text-[#f7d117]">seu contato</strong> para autenticar sua assinatura no caderno oficial sem expor seus dados no site.
+          Enviamos um código de 6 dígitos para <strong id="otp-contact-display" class="text-sky-300">seu contato</strong> para validar sua assinatura.
         </p>
 
         <div>
           <div class="flex justify-between items-center mb-1.5">
             <label class="text-xs font-bold uppercase text-slate-300">Código de Verificação</label>
-            <button type="button" onclick="preencherOTPTeste()" class="text-xs text-[#f7d117] hover:underline font-bold">
+            <button type="button" onclick="preencherOTPTeste()" class="text-xs text-sky-300 hover:underline font-bold">
               ⚡ Preencher Código de Teste (481930)
             </button>
           </div>
           <input id="otp-code-input" type="text" maxlength="6" value="481930"
-            class="w-full px-4 py-3 rounded-xl bg-[#061326] border border-slate-700 text-center font-mono text-2xl tracking-widest text-[#f7d117] font-bold" />
+            class="w-full px-4 py-3 rounded-xl bg-[#061326] border border-slate-700 text-center font-mono text-2xl tracking-widest text-amber-300 font-bold" />
         </div>
 
-        <button onclick="confirmarAssinaturaOTP()" class="w-full py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm uppercase tracking-wider transition-all">
-          ✓ Validar e Gerar Recibo Oficial
+        <button onclick="confirmarAssinaturaOTP()" class="w-full py-3.5 rounded-xl btn-friendly-primary font-extrabold text-sm uppercase tracking-wider">
+          ✓ Validar e Gerar Comprovante
         </button>
       </div>
     </div>
   </section>
 
   <!-- ===================================================================== -->
-  <!-- TELA 3: COMPROVANTE AUDITÁVEL + CARD VIRAL STORIES (COM INICIAIS)     -->
+  <!-- TELA 3: COMPROVANTE AUDITÁVEL + CARD VIRAL STORIES                    -->
   <!-- ===================================================================== -->
   <section id="screen-comprovante" class="screen-view flex-1 py-12 px-4 sm:px-6">
     <div class="max-w-5xl mx-auto">
@@ -642,8 +672,8 @@
         <div class="flex items-center gap-3">
           <span class="w-10 h-10 rounded-xl bg-emerald-500 text-slate-950 font-extrabold text-xl flex items-center justify-center">✓</span>
           <div>
-            <h3 class="font-bold text-white text-base sm:text-lg">Assinatura Auditada com Sigilo Público Garantido!</h3>
-            <p class="text-xs sm:text-sm text-emerald-300">No documento final sua assinatura está validada; no site público constam apenas suas iniciais.</p>
+            <h3 class="font-bold text-white text-base sm:text-lg">Assinatura Confirmada com Sucesso!</h3>
+            <p class="text-xs sm:text-sm text-emerald-300">Obrigado por apoiar os Guarda-Vidas de Florianópolis e de Santa Catarina.</p>
           </div>
         </div>
         <button onclick="switchScreen('transparencia')" class="px-4 py-2 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-400/40 text-emerald-200 text-xs font-bold">
@@ -652,13 +682,13 @@
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        <div class="lg:col-span-7 bg-[#091b36] border-2 border-slate-700 rounded-2xl p-6 sm:p-8 space-y-5">
+        <div class="lg:col-span-7 bg-[#091b36] border border-slate-700 rounded-2xl p-6 sm:p-8 space-y-5">
           <div class="flex items-center justify-between border-b border-slate-700 pb-4 gap-3">
             <div class="flex items-center gap-3">
               <img src="assets/img/logo-asaf.png" alt="Logo ASAF" class="w-14 h-14 object-contain shrink-0" />
               <div>
-                <span class="text-xs uppercase font-bold text-[#f7d117]">asafgv.com • Certificado Eletrônico</span>
-                <h3 class="font-display text-2xl font-bold text-white uppercase">Recibo de Auditoria A.S.A.F.</h3>
+                <span class="text-xs uppercase font-bold text-sky-300">asafgv.com • Certificado Eletrônico</span>
+                <h3 class="font-display text-2xl font-bold text-white uppercase">Recibo de Subscrição A.S.A.F.</h3>
               </div>
             </div>
             <span id="rec-protocol" class="px-3 py-1 rounded bg-[#061326] border border-slate-700 font-mono text-xs text-emerald-400 font-bold">
@@ -668,21 +698,20 @@
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
             <div class="p-3.5 rounded-xl bg-[#061326] border border-slate-800">
-              <div class="text-xs text-slate-400">Validação p/ Documento Final</div>
-              <div id="rec-name" class="font-bold text-white mt-0.5 text-xs sm:text-sm">Lucas Martins Silveira (Restrito ao Documento Oficial)</div>
-              <div id="rec-public-initials" class="text-xs text-emerald-400 font-bold mt-1">Exibido no site apenas como: L. M. S.</div>
+              <div class="text-xs text-slate-400">Apoiador</div>
+              <div id="rec-name" class="font-bold text-white mt-0.5 text-xs sm:text-sm">Lucas Martins Silveira (Exibido no mural como L. M. S.)</div>
             </div>
             <div class="p-3.5 rounded-xl bg-[#061326] border border-slate-800">
-              <div class="text-xs text-slate-400">CPF Validado (Criptografado)</div>
+              <div class="text-xs text-slate-400">CPF Validado</div>
               <div id="rec-cpf" class="font-mono font-bold text-emerald-400 mt-0.5">***.482.910-**</div>
             </div>
             <div class="p-3.5 rounded-xl bg-[#061326] border border-slate-800">
-              <div class="text-xs text-slate-400">Município / Base Eleitoral SC</div>
+              <div class="text-xs text-slate-400">Município / SC</div>
               <div id="rec-location" class="font-bold text-white mt-0.5">Campeche — Florianópolis - SC</div>
             </div>
             <div class="p-3.5 rounded-xl bg-[#061326] border border-slate-800">
               <div class="text-xs text-slate-400">Perfil</div>
-              <div id="rec-profile" class="font-bold text-[#f7d117] mt-0.5">Guarda-Vidas Civil (GVC)</div>
+              <div id="rec-profile" class="font-bold text-amber-300 mt-0.5">Guarda-Vidas Civil (GVC)</div>
             </div>
           </div>
 
@@ -701,33 +730,33 @@
 
           <div class="pt-2 space-y-3">
             <div class="flex flex-wrap gap-3">
-              <button id="btn-copy-share" onclick="copiarTextoCompartilhamento()" class="flex-1 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm transition-all">
+              <button id="btn-copy-share" onclick="copiarTextoCompartilhamento()" class="flex-1 py-3 px-4 rounded-xl btn-friendly-primary font-bold text-xs sm:text-sm">
                 📲 Copiar Link de asafgv.com p/ WhatsApp
               </button>
-              <a href="https://www.instagram.com/asaf.gv/" target="_blank" rel="noopener noreferrer" class="py-3 px-4 rounded-xl bg-[#e61919] hover:bg-red-500 border border-[#f7d117] text-white font-bold text-xs sm:text-sm transition-all">
+              <a href="https://www.instagram.com/asaf.gv/" target="_blank" rel="noopener noreferrer" class="py-3 px-4 rounded-xl btn-friendly-gold font-bold text-xs sm:text-sm">
                 📸 Marcar @asaf.gv
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Card Stories com Iniciais -->
+        <!-- Card Stories -->
         <div class="lg:col-span-5 flex flex-col items-center">
-          <div class="text-xs font-bold uppercase tracking-wider text-[#f7d117] mb-3">
-            Card Oficial Stories (Com Iniciais Protegidas)
+          <div class="text-xs font-bold uppercase tracking-wider text-sky-300 mb-3">
+            Card p/ Stories do Instagram (9:16)
           </div>
 
-          <div class="w-full max-w-[320px] rounded-3xl overflow-hidden border-4 border-[#f7d117] bg-gradient-to-b from-[#103260] via-[#091b36] to-[#061326] p-6 shadow-2xl text-center space-y-3.5 relative">
+          <div class="w-full max-w-[320px] rounded-3xl overflow-hidden border-2 border-sky-400/60 bg-gradient-to-b from-[#103260] via-[#091b36] to-[#061326] p-6 shadow-2xl text-center space-y-3.5 relative">
             <div class="flex justify-center">
               <img src="assets/img/logo-asaf.png" alt="Brasão Oficial ASAF" class="w-28 h-28 object-contain asaf-logo-glow" />
             </div>
 
             <div class="font-display text-2xl font-bold text-white uppercase leading-tight">
-              Eu Assinei Pelos <br /><span class="text-[#f7d117]">Guarda-Vidas</span> de SC!
+              Eu Apoio os <br /><span class="text-amber-300">Guarda-Vidas</span> de SC!
             </div>
 
-            <div class="p-3.5 rounded-2xl bg-[#061326]/90 border border-[#f7d117]/40 text-left space-y-1 text-xs">
-              <div class="text-[#f7d117] font-bold uppercase text-[11px]">✊ Pauta Estadual asafgv.com:</div>
+            <div class="p-3.5 rounded-2xl bg-[#061326]/90 border border-sky-400/30 text-left space-y-1 text-xs">
+              <div class="text-amber-300 font-bold uppercase text-[11px]">✊ Pelas 5 Pautas da A.S.A.F.:</div>
               <div class="text-slate-100">✓ 1. Reajuste Digno Já</div>
               <div class="text-slate-100">✓ 2. Redução de Jornada s/ corte salarial</div>
               <div class="text-slate-100">✓ 3. Guarda-Vidas o Ano Inteiro</div>
@@ -735,14 +764,14 @@
               <div class="text-slate-100">✓ 5. Plano de Carreira</div>
             </div>
 
-            <div class="py-2 px-4 rounded-xl bg-[#e61919]/25 border border-[#e61919]/50">
-              <div class="text-[11px] text-sky-200">Assinatura Auditada <span id="story-number" class="text-[#f7d117] font-bold">#6.412</span></div>
-              <div id="story-name" class="font-bold text-white text-sm">Iniciais: L. M. S.</div>
-              <div id="story-profile" class="text-[11px] text-[#f7d117]">Guarda-Vidas Civil (GVC) • Florianópolis/SC</div>
+            <div class="py-2 px-4 rounded-xl bg-sky-500/15 border border-sky-400/30">
+              <div class="text-[11px] text-sky-200">Assinatura <span id="story-number" class="text-amber-300 font-bold">#6.412</span></div>
+              <div id="story-name" class="font-bold text-white text-sm">L. M. S.</div>
+              <div id="story-profile" class="text-[11px] text-sky-300">Guarda-Vidas Civil (GVC) • Florianópolis/SC</div>
             </div>
 
-            <div class="pt-1 text-xs font-extrabold text-[#f7d117] tracking-wide">
-              🌐 Assine em: asafgv.com | @asaf.gv
+            <div class="pt-1 text-xs font-extrabold text-amber-300 tracking-wide">
+              🌐 asafgv.com | @asaf.gv
             </div>
           </div>
         </div>
@@ -757,19 +786,19 @@
     <div class="max-w-7xl mx-auto space-y-8">
 
       <!-- Barra Seletora dos 3 Perfis de Login (RBAC Django) -->
-      <div class="bg-[#091b36] border-2 border-[#f7d117] rounded-2xl p-6 shadow-xl">
+      <div class="bg-[#091b36] border border-sky-400/40 rounded-2xl p-6 shadow-xl">
         <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
           <div class="flex items-center gap-4">
             <img src="assets/img/logo-asaf.png" alt="Logo ASAF" class="w-16 h-16 object-contain shrink-0" />
             <div>
               <span class="px-2.5 py-0.5 rounded bg-sky-500/20 text-sky-300 border border-sky-400/30 text-[11px] font-bold uppercase">
-                Sistema de Login em 3 Perfis (Django Auth RBAC • asafgv.com)
+                Portal Integrado asafgv.com • 3 Perfis de Acesso
               </span>
               <h2 class="font-display text-2xl sm:text-3xl font-bold text-white uppercase mt-1">
-                Simulador de Painéis por Perfil de Usuário
+                Área do Banhista, GVC e Administração
               </h2>
               <p class="text-xs sm:text-sm text-slate-300">
-                Clique abaixo para alternar em tempo real entre as permissões e telas de cada um dos 3 perfis do site:
+                Selecione abaixo o perfil para visualizar e testar suas funcionalidades:
               </p>
             </div>
           </div>
@@ -795,13 +824,13 @@
       <div id="panel-role-banhista" class="hidden space-y-8">
         <div class="p-4 rounded-xl bg-sky-950/60 border border-sky-400/40 flex flex-wrap items-center justify-between gap-4">
           <div>
-            <span class="text-xs font-bold uppercase text-sky-300">Você está visualizando como: PERFIL BANHISTA / CIDADÃO</span>
+            <span class="text-xs font-bold uppercase text-sky-300">Visão Ativa: PERFIL BANHISTA / CIDADÃO</span>
             <p class="text-xs sm:text-sm text-slate-200 mt-0.5">
-              Permissões: Indicar falta de GVC ou problemas em praias de SC, enviar dúvidas técnicas para os Guarda-Vidas e assinar a petição com iniciais protegidas.
+              Indique falta de guarda-vidas ou problemas em praias de SC, envie dúvidas sobre condições de mar/correntes de retorno e assine a petição.
             </p>
           </div>
-          <button onclick="switchScreen('peticao')" class="px-4 py-2 rounded-lg bg-[#e61919] text-white font-bold text-xs uppercase border border-[#f7d117]">
-            ✍️ Minha Assinatura na Petição
+          <button onclick="switchScreen('peticao')" class="px-4 py-2 rounded-lg btn-friendly-primary font-bold text-xs uppercase">
+            ✍️ Assinar a Petição
           </button>
         </div>
 
@@ -809,17 +838,17 @@
           <!-- Coluna 1: Indicar Falta de GVC / Problemas na Praia -->
           <div class="lg:col-span-6 bg-[#091b36] border border-slate-700 rounded-2xl p-6 space-y-5">
             <div>
-              <span class="px-2.5 py-0.5 rounded bg-red-600/30 text-red-300 text-xs font-bold uppercase">Fiscalização Cidadã</span>
+              <span class="px-2.5 py-0.5 rounded bg-amber-500/20 text-amber-300 text-xs font-bold uppercase">Colaboração Cidadã</span>
               <h3 class="font-display text-2xl font-bold text-white uppercase mt-1">
                 Indicar Falta de GVC ou Problema em Praia
               </h3>
               <p class="text-xs text-slate-300">
-                Viu uma praia movimentada com o posto fechado (bandeira preta) ou sem guarda-vidas? Registre aqui para o mapa estadual da ASAF:
+                Viu uma praia movimentada sem guarda-vidas ou corrente de retorno sem sinalização de bandeira vermelha? Registre aqui:
               </p>
             </div>
 
             <div id="rep-success-msg" class="hidden p-3 rounded-xl bg-emerald-950 border border-emerald-500 text-emerald-200 text-xs font-bold">
-              ✓ Alerta de praia registrado com sucesso!
+              ✓ Registro enviado com sucesso!
             </div>
 
             <form onsubmit="enviarRelatoPraia(event)" class="space-y-3.5">
@@ -830,34 +859,34 @@
                     class="w-full px-3.5 py-2.5 rounded-xl bg-[#061326] border border-slate-700 text-white text-xs sm:text-sm" />
                 </div>
                 <div>
-                  <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Seu Nome (Sairá só Iniciais)</label>
+                  <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Seu Nome</label>
                   <input id="rep-initials" type="text" placeholder="Ex: Carlos Eduardo"
                     class="w-full px-3.5 py-2.5 rounded-xl bg-[#061326] border border-slate-700 text-white text-xs sm:text-sm" />
                 </div>
               </div>
 
               <div>
-                <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Tipo de Problema *</label>
+                <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Tipo de Ocorrência *</label>
                 <select id="rep-category" class="w-full px-3.5 py-2.5 rounded-xl bg-[#061326] border border-slate-700 text-white text-xs sm:text-sm">
-                  <option value="Falta de GVC / Posto com Bandeira Preta">🚨 Falta de GVC / Posto Fechado (Bandeira Preta)</option>
-                  <option value="Praia Cheia Sem Sinalização de Corrente">🚩 Ausência de Bandeiras de Sinalização de Risco</option>
-                  <option value="Estrutura de Posto Danificada">🏚️ Posto de Salvamento Deteriorado / Abandonado</option>
+                  <option value="Corrente de Retorno Sem Sinalização (Sem GVC)">🚩 Corrente de Retorno Sem Bandeira Vermelha / Sem GVC</option>
+                  <option value="Posto Fechado em Dia de Praia Cheia">🏖️ Posto de Salvamento Fechado em Dia Movimentado</option>
+                  <option value="Estrutura de Posto Danificada">🏚️ Estrutura de Posto Precisando de Manutenção</option>
                 </select>
               </div>
 
               <div>
-                <label class="block text-xs font-bold uppercase text-slate-300 mb-1">O que você presenciou? *</label>
+                <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Descrição *</label>
                 <textarea id="rep-desc" rows="3" required placeholder="Informe horário, movimento de banhistas na água e situação do posto..."
                   class="w-full px-3.5 py-2.5 rounded-xl bg-[#061326] border border-slate-700 text-white text-xs sm:text-sm"></textarea>
               </div>
 
-              <button type="submit" class="w-full py-3 rounded-xl bg-[#e61919] hover:bg-red-500 text-white font-extrabold text-xs sm:text-sm uppercase border border-[#f7d117]">
-                Enviar Alerta de Praia →
+              <button type="submit" class="w-full py-3 rounded-xl btn-friendly-primary font-extrabold text-xs sm:text-sm uppercase">
+                Enviar Indicação de Praia →
               </button>
             </form>
 
             <div class="pt-4 border-t border-slate-800 space-y-3">
-              <h4 class="font-bold text-white text-xs uppercase tracking-wider">Últimos Alertas de Praias em SC:</h4>
+              <h4 class="font-bold text-white text-xs uppercase tracking-wider">Últimos Registros nas Praias de SC:</h4>
               <div id="reports-list" class="space-y-3 max-h-80 overflow-y-auto pr-1"></div>
             </div>
           </div>
@@ -865,24 +894,24 @@
           <!-- Coluna 2: Enviar Dúvidas para os Guarda-Vidas -->
           <div class="lg:col-span-6 bg-[#091b36] border border-slate-700 rounded-2xl p-6 space-y-5">
             <div>
-              <span class="px-2.5 py-0.5 rounded bg-sky-500/20 text-sky-300 text-xs font-bold uppercase">Canal Direto com Guarda-Vidas</span>
+              <span class="px-2.5 py-0.5 rounded bg-sky-500/20 text-sky-300 text-xs font-bold uppercase">Orientação de Segurança Aquática</span>
               <h3 class="font-display text-2xl font-bold text-white uppercase mt-1">
                 Tire Suas Dúvidas com Nossos GVCs
               </h3>
               <p class="text-xs text-slate-300">
-                Envie perguntas sobre condições de mar, correntes de retorno, significado das bandeiras ou funcionamento dos postos:
+                Pergunte aos guarda-vidas sobre maré de retorno, bandeiras de sinalização, melhores pontos para banho ou funcionamento dos postos:
               </p>
             </div>
 
             <form onsubmit="enviarDuvidaBanhista(event)" class="space-y-3.5">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Seu Nome (Exibe só Iniciais)</label>
+                  <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Seu Nome</label>
                   <input id="q-bather-name" type="text" placeholder="Ex: Fernanda Lima"
                     class="w-full px-3.5 py-2.5 rounded-xl bg-[#061326] border border-slate-700 text-white text-xs sm:text-sm" />
                 </div>
                 <div>
-                  <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Praia / Cidade de Interesse *</label>
+                  <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Praia / Cidade *</label>
                   <input id="q-bather-beach" type="text" required placeholder="Ex: Praia Mole, Garopaba..."
                     class="w-full px-3.5 py-2.5 rounded-xl bg-[#061326] border border-slate-700 text-white text-xs sm:text-sm" />
                 </div>
@@ -894,7 +923,7 @@
                   class="w-full px-3.5 py-2.5 rounded-xl bg-[#061326] border border-slate-700 text-white text-xs sm:text-sm"></textarea>
               </div>
 
-              <button type="submit" class="w-full py-3 rounded-xl bg-[#f7d117] hover:bg-yellow-300 text-slate-950 font-extrabold text-xs sm:text-sm uppercase">
+              <button type="submit" class="w-full py-3 rounded-xl btn-friendly-gold font-extrabold text-xs sm:text-sm uppercase">
                 Enviar Dúvida aos Guarda-Vidas →
               </button>
             </form>
@@ -911,15 +940,15 @@
       <!-- PAINEL 2: VISÃO DO PERFIL GVC (GUARDA-VIDAS)                    -->
       <!-- =============================================================== -->
       <div id="panel-role-gvc" class="space-y-8">
-        <div class="p-4 rounded-xl bg-amber-950/60 border border-[#f7d117]/50 flex flex-wrap items-center justify-between gap-4">
+        <div class="p-4 rounded-xl bg-sky-950/60 border border-sky-400/40 flex flex-wrap items-center justify-between gap-4">
           <div>
-            <span class="text-xs font-bold uppercase text-[#f7d117]">Você está visualizando como: PERFIL GVC (GUARDA-VIDAS ASSOCIADO)</span>
+            <span class="text-xs font-bold uppercase text-amber-300">Visão Ativa: PERFIL GVC (GUARDA-VIDAS ASSOCIADO)</span>
             <p class="text-xs sm:text-sm text-slate-200 mt-0.5">
-              Permissões: Acesso ao Mural Interno da Categoria, Agenda de Horários/Escalas/Assembleias, Responder Dúvidas de Banhistas e Boletins Internos.
+              Acesso ao Mural Interno da Categoria, Agenda de Horários e Eventos, Resposta a Dúvidas de Banhistas e Publicações Internas.
             </p>
           </div>
-          <span class="px-3 py-1 rounded bg-[#061326] border border-[#f7d117]/40 text-xs text-[#f7d117] font-mono">
-            Matrícula Associativa Ativa • SC
+          <span class="px-3 py-1 rounded bg-[#061326] border border-sky-400/30 text-xs text-sky-300 font-mono">
+            Associado GVC • Santa Catarina
           </span>
         </div>
 
@@ -928,16 +957,16 @@
           <div class="lg:col-span-6 bg-[#091b36] border border-slate-700 rounded-2xl p-6 space-y-4">
             <div class="flex items-center justify-between">
               <div>
-                <span class="text-xs font-bold uppercase text-[#f7d117]">Comunicação Interna</span>
+                <span class="text-xs font-bold uppercase text-sky-300">Comunicação da Categoria</span>
                 <h3 class="font-display text-2xl font-bold text-white uppercase">Mural Interno dos GVCs</h3>
               </div>
-              <span class="text-xs text-emerald-400 font-semibold">🔒 Visível apenas p/ GVC e Admin</span>
+              <span class="text-xs text-emerald-400 font-semibold">Exclusivo GVC & Admin</span>
             </div>
 
             <form onsubmit="postarMuralInterno(event)" class="flex flex-col sm:flex-row gap-2">
-              <input id="mural-new-text" type="text" required placeholder="Publicar aviso no mural interno para os GVCs de SC..."
+              <input id="mural-new-text" type="text" required placeholder="Publicar mensagem no mural interno para os GVCs de SC..."
                 class="flex-1 px-3.5 py-2.5 rounded-xl bg-[#061326] border border-slate-700 text-white text-xs sm:text-sm" />
-              <button type="submit" class="px-5 py-2.5 rounded-xl bg-[#f7d117] hover:bg-yellow-300 text-slate-950 font-extrabold text-xs uppercase shrink-0">
+              <button type="submit" class="px-5 py-2.5 rounded-xl btn-friendly-primary font-extrabold text-xs uppercase shrink-0">
                 Publicar no Mural
               </button>
             </form>
@@ -950,16 +979,16 @@
             <div class="bg-[#091b36] border border-slate-700 rounded-2xl p-6 space-y-4">
               <div class="flex items-center justify-between">
                 <div>
-                  <span class="text-xs font-bold uppercase text-sky-300">Horários & Convocações</span>
+                  <span class="text-xs font-bold uppercase text-amber-300">Horários & Convocações</span>
                   <h3 class="font-display text-2xl font-bold text-white uppercase">Agenda Oficial GVC</h3>
                 </div>
-                <span class="text-xs text-slate-400">Gerenciada pelo Admin</span>
+                <span class="text-xs text-slate-400">Atualizada pela Diretoria</span>
               </div>
               <div id="agenda-list-gvc" class="space-y-2.5"></div>
             </div>
 
             <div class="bg-[#091b36] border border-slate-700 rounded-2xl p-6 space-y-4">
-              <h3 class="font-display text-xl font-bold text-white uppercase">Publicações & Boletins Internos GVC</h3>
+              <h3 class="font-display text-xl font-bold text-white uppercase">Publicações & Boletins GVC</h3>
               <div id="gvc-news-list" class="space-y-2.5"></div>
             </div>
           </div>
@@ -969,10 +998,10 @@
         <div class="bg-[#091b36] border border-slate-700 rounded-2xl p-6 space-y-4">
           <div class="flex flex-wrap items-center justify-between gap-2">
             <div>
-              <span class="text-xs font-bold uppercase text-emerald-400">Serviço à Comunidade</span>
+              <span class="text-xs font-bold uppercase text-emerald-400">Orientação Comunitária</span>
               <h3 class="font-display text-2xl font-bold text-white uppercase">Responder Dúvidas de Banhistas</h3>
             </div>
-            <span class="text-xs text-slate-300">Suas respostas aparecem com selo de GVC Verificado</span>
+            <span class="text-xs text-slate-300">Oriente os banhistas sobre correntes de retorno, bandeiras e prevenção</span>
           </div>
           <div id="questions-list-gvc" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
         </div>
@@ -982,15 +1011,15 @@
       <!-- PAINEL 3: VISÃO DO PERFIL ADMIN (CONTROLE TOTAL + SOFT DELETE)  -->
       <!-- =============================================================== -->
       <div id="panel-role-admin" class="hidden space-y-8">
-        <div class="p-4 rounded-xl bg-red-950/70 border-2 border-[#e61919] flex flex-wrap items-center justify-between gap-4">
+        <div class="p-4 rounded-xl bg-slate-900 border border-amber-400/50 flex flex-wrap items-center justify-between gap-4">
           <div>
-            <span class="text-xs font-bold uppercase text-[#f7d117]">Você está visualizando como: PERFIL ADMIN (DIRETORIA ASAF)</span>
-            <p class="text-xs sm:text-sm text-slate-100 mt-0.5">
+            <span class="text-xs font-bold uppercase text-amber-300">Visão Ativa: PERFIL ADMIN (DIRETORIA ASAF)</span>
+            <p class="text-xs sm:text-sm text-slate-200 mt-0.5">
               Controle Total: Métricas estaduais de assinaturas, Moderação do Mural Interno com <strong>Soft Delete</strong> (padrão Django <code>semferrao.com</code>), Gestão de Horários na Agenda e Engine de Notícias.
             </p>
           </div>
-          <button onclick="exportarAmostraCSV()" class="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase">
-            📥 Exportar Base Criptografada (CSV)
+          <button onclick="exportarAmostraCSV()" class="px-4 py-2 rounded-lg btn-friendly-primary font-bold text-xs uppercase">
+            📥 Exportar Relatório de Assinaturas (CSV)
           </button>
         </div>
 
@@ -998,7 +1027,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <div class="p-5 rounded-2xl bg-[#091b36] border border-slate-700">
             <div class="text-xs text-slate-400 uppercase font-bold">Total Auditado em SC</div>
-            <div class="font-display text-3xl font-bold text-[#f7d117] mt-1 sig-counter-num">6.412</div>
+            <div class="font-display text-3xl font-bold text-amber-300 mt-1 sig-counter-num">6.412</div>
             <div class="text-xs text-emerald-400 mt-1">✓ 100% com CPF único validado</div>
           </div>
           <div class="p-5 rounded-2xl bg-[#091b36] border border-slate-700">
@@ -1008,8 +1037,8 @@
           </div>
           <div class="p-5 rounded-2xl bg-[#091b36] border border-slate-700">
             <div class="text-xs text-slate-400 uppercase font-bold">Assinaturas de GVCs & Bombeiros</div>
-            <div class="font-display text-3xl font-bold text-red-400 mt-1">1.480</div>
-            <div class="text-xs text-slate-300 mt-1">Protegidos por iniciais no site público</div>
+            <div class="font-display text-3xl font-bold text-sky-300 mt-1">1.480</div>
+            <div class="text-xs text-slate-300 mt-1">Efetivo mobilizado no estado</div>
           </div>
           <div class="p-5 rounded-2xl bg-[#091b36] border border-slate-700">
             <div class="text-xs text-slate-400 uppercase font-bold">Top Regiões em SC</div>
@@ -1026,22 +1055,21 @@
           <div class="lg:col-span-6 bg-[#091b36] border border-slate-700 rounded-2xl p-6 space-y-4">
             <div class="flex items-center justify-between">
               <div>
-                <span class="text-xs font-bold uppercase text-red-400">Auditoria & Soft Delete (Django BaseAuditModel)</span>
+                <span class="text-xs font-bold uppercase text-amber-300">Auditoria & Soft Delete (Django BaseAuditModel)</span>
                 <h3 class="font-display text-2xl font-bold text-white uppercase">Moderar Mensagens do Mural Interno</h3>
               </div>
             </div>
             <p class="text-xs text-slate-300">
-              Ao apagar uma mensagem abaixo, ela recebe <code>is_deleted=True</code> e <code>deleted_at</code>, sumindo imediatamente da visão dos GVCs, mas permanecendo rastreável para auditoria ou restauração pelo Admin:
+              Ao ocultar uma mensagem, ela recebe <code>is_deleted=True</code> e <code>deleted_at</code>, saindo da visão dos GVCs sem perder o registro no banco de dados:
             </p>
             <div id="mural-list-admin" class="space-y-3"></div>
           </div>
 
           <!-- Administrar Horários nas Agendas + Engine de Notícias -->
           <div class="lg:col-span-6 space-y-6">
-            <!-- Administrar Agenda -->
             <div class="bg-[#091b36] border border-slate-700 rounded-2xl p-6 space-y-4">
               <div>
-                <span class="text-xs font-bold uppercase text-[#f7d117]">Gestão de Escalas, Assembleias e Plantões</span>
+                <span class="text-xs font-bold uppercase text-sky-300">Gestão de Escalas, Assembleias e Plantões</span>
                 <h3 class="font-display text-2xl font-bold text-white uppercase">Administrar Horários na Agenda</h3>
               </div>
 
@@ -1054,7 +1082,7 @@
                   class="px-3 py-2 rounded-lg bg-[#061326] border border-slate-700 text-white text-xs sm:col-span-2" />
                 <input id="ag-location" type="text" placeholder="Local / Posto / Link"
                   class="px-3 py-2 rounded-lg bg-[#061326] border border-slate-700 text-white text-xs" />
-                <button type="submit" class="py-2 px-4 rounded-lg bg-[#f7d117] hover:bg-yellow-300 text-slate-950 font-extrabold text-xs uppercase">
+                <button type="submit" class="py-2 px-4 rounded-lg btn-friendly-primary font-extrabold text-xs uppercase">
                   + Adicionar Horário na Agenda
                 </button>
               </form>
@@ -1062,7 +1090,6 @@
               <div id="agenda-list-admin" class="space-y-2 pt-2"></div>
             </div>
 
-            <!-- Engine de Notícias e Publicações -->
             <div class="bg-[#091b36] border border-slate-700 rounded-2xl p-6 space-y-4">
               <div>
                 <span class="text-xs font-bold uppercase text-emerald-400">CMS Django • asafgv.com</span>
@@ -1074,18 +1101,18 @@
                   class="w-full px-3.5 py-2 rounded-lg bg-[#061326] border border-slate-700 text-white text-xs sm:text-sm" />
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <select id="news-category" class="px-3 py-2 rounded-lg bg-[#061326] border border-slate-700 text-white text-xs">
+                    <option value="Prevenção & Salvamento">🚩 Categoria: Prevenção & Salvamento</option>
                     <option value="Mobilização Estadual">📢 Categoria: Mobilização Estadual</option>
-                    <option value="Segurança nas Praias">🏖️ Categoria: Segurança nas Praias</option>
                     <option value="Nota Oficial ASAF">⚖️ Categoria: Nota Oficial ASAF</option>
                   </select>
                   <select id="news-visibility" class="px-3 py-2 rounded-lg bg-[#061326] border border-slate-700 text-white text-xs">
                     <option value="PUBLIC">🌐 Visibilidade: Pública na Home (asafgv.com)</option>
-                    <option value="INTERNAL_GVC">🔒 Visibilidade: Exclusiva Mural/Portal GVC</option>
+                    <option value="INTERNAL_GVC">🔒 Visibilidade: Interna p/ GVCs</option>
                   </select>
                 </div>
                 <textarea id="news-summary" rows="2" required placeholder="Resumo/conteúdo da publicação..."
                   class="w-full px-3.5 py-2 rounded-lg bg-[#061326] border border-slate-700 text-white text-xs sm:text-sm"></textarea>
-                <button type="submit" class="w-full py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-xs uppercase">
+                <button type="submit" class="w-full py-2.5 rounded-lg btn-friendly-gold font-extrabold text-xs uppercase">
                   Publicar no Portal asafgv.com →
                 </button>
               </form>
@@ -1104,23 +1131,23 @@
     <div class="max-w-5xl mx-auto space-y-8">
       <div class="flex flex-wrap items-center justify-between gap-4">
         <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-[#f7d117]">asafgv.com • Dossiê Estadual & Arquitetura Técnica</span>
+          <span class="text-xs font-bold uppercase tracking-widest text-sky-400">asafgv.com • Dossiê Estadual & Arquitetura Técnica</span>
           <h2 class="font-display text-3xl sm:text-4xl font-bold text-white uppercase mt-1">
             Ofício Estadual para Políticos + Arquitetura Django
           </h2>
         </div>
         <div class="no-print flex flex-wrap gap-3">
-          <button onclick="exportarAmostraCSV()" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase transition-all">
+          <button onclick="exportarAmostraCSV()" class="px-4 py-2.5 rounded-xl btn-friendly-primary font-bold text-xs uppercase">
             📥 Baixar Planilha Auditável (CSV)
           </button>
-          <button onclick="window.print()" class="px-4 py-2.5 rounded-xl bg-[#091b36] hover:bg-slate-800 border border-[#f7d117] text-[#f7d117] font-bold text-xs uppercase transition-all">
+          <button onclick="window.print()" class="px-4 py-2.5 rounded-xl bg-[#091b36] hover:bg-slate-800 border border-sky-400/40 text-sky-200 font-bold text-xs uppercase transition-all">
             🖨️ Imprimir / Salvar Ofício em PDF
           </button>
         </div>
       </div>
 
       <!-- Resumo da Arquitetura Django (Padrão semferrao.com) -->
-      <div class="no-print bg-[#091b36] border-2 border-sky-400/40 rounded-2xl p-6 space-y-4">
+      <div class="no-print bg-[#091b36] border border-sky-400/40 rounded-2xl p-6 space-y-4">
         <div class="flex flex-wrap items-center justify-between gap-2">
           <h3 class="font-display text-2xl font-bold text-white uppercase">
             Arquitetura Backend Projetada: Django + PostgreSQL (`asafgv.com`)
@@ -1129,19 +1156,19 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-xs">
           <div class="p-4 rounded-xl bg-[#061326] border border-slate-800 space-y-1.5">
-            <div class="font-bold text-[#f7d117] uppercase">1. Soft Delete Global</div>
-            <p class="text-slate-300"><code>BaseAuditModel</code> com <code>is_deleted</code>, <code>deleted_at</code> e <code>deleted_by</code>. Nada é perdido fisicamente; o Admin apaga e restaura registros com log de auditoria.</p>
+            <div class="font-bold text-amber-300 uppercase">1. Soft Delete Global</div>
+            <p class="text-slate-300"><code>BaseAuditModel</code> com <code>is_deleted</code>, <code>deleted_at</code> e <code>deleted_by</code>. Nada é perdido fisicamente; o Admin oculta e restaura registros com log de auditoria.</p>
           </div>
           <div class="p-4 rounded-xl bg-[#061326] border border-slate-800 space-y-1.5">
-            <div class="font-bold text-emerald-400 uppercase">2. Criptografia & Iniciais</div>
-            <p class="text-slate-300">CPF indexado por hash <code>SHA-256</code> (unicidade) e criptografado com <code>Fernet/AES-256</code>. Nas views públicas, expõe apenas <code>public_initials</code>.</p>
+            <div class="font-bold text-emerald-400 uppercase">2. Segurança & LGPD</div>
+            <p class="text-slate-300">CPF indexado por hash <code>SHA-256</code> (unicidade) e criptografado com <code>Fernet/AES-256</code>, exibindo apenas as iniciais no mural público.</p>
           </div>
           <div class="p-4 rounded-xl bg-[#061326] border border-slate-800 space-y-1.5">
             <div class="font-bold text-sky-400 uppercase">3. RBAC em 3 Perfis</div>
             <p class="text-slate-300"><code>CustomUser</code> com roles estritos (<code>ADMIN</code>, <code>GVC</code>, <code>BANHISTA</code>) protegidos por mixins e decorators no servidor.</p>
           </div>
           <div class="p-4 rounded-xl bg-[#061326] border border-slate-800 space-y-1.5">
-            <div class="font-bold text-red-400 uppercase">4. Engine de Notícias</div>
+            <div class="font-bold text-amber-300 uppercase">4. Engine de Notícias</div>
             <p class="text-slate-300">CMS integrado com slugs automáticos, SEO/OpenGraph para WhatsApp/Instagram e visibilidade dupla (Pública ou Interna GVC).</p>
           </div>
         </div>
@@ -1153,7 +1180,7 @@
           <div class="flex items-center gap-4">
             <img src="assets/img/logo-asaf.png" alt="Brasão Oficial ASAF" class="w-20 h-20 object-contain shrink-0" />
             <div>
-              <div class="font-display text-2xl font-bold uppercase tracking-wide text-red-700">
+              <div class="font-display text-2xl font-bold uppercase tracking-wide text-slate-900">
                 A.S.A.F. — Associação de Salvamento Aquático de Florianópolis
               </div>
               <div class="text-xs text-slate-600 font-medium">
@@ -1187,7 +1214,7 @@
           <ol class="list-decimal pl-5 space-y-2 font-medium">
             <li><strong>Reajuste Digno Já:</strong> Recomposição real e imediata dos valores pagos aos Guarda-Vidas Civis em Santa Catarina;</li>
             <li><strong>Redução da Carga Horária sem Redução de Salário:</strong> Fim das jornadas exaustivas de 9h a 12h sob exposição solar severa, adotando turnos seguros de 6 horas sem perda remuneratória;</li>
-            <li><strong>Guarda-Vidas nas Praias o Ano Inteiro:</strong> Manutenção de postos de salvamento ativos durante os 12 meses do ano em Florianópolis e nas praias catarinenses;</li>
+            <li><strong>Guarda-Vidas nas Praias o Ano Inteiro:</strong> Manutenção de postos de salvamento ativos durante os 12 meses do ano em Florianópolis e nas praias catarinenses, garantindo a sinalização preventiva das correntes de retorno (bandeira vermelha) e o socorro imediato;</li>
             <li><strong>Contratação Digna e Fim do Sucateamento:</strong> Superação da precarização do modelo de "voluntariado" (Lei Estadual nº 13.880/2006), assegurando direitos trabalhistas, previdenciários e reforma imediata dos postos e EPIs;</li>
             <li><strong>Plano de Carreira:</strong> Reconhecimento de tempo de serviço, temporadas trabalhadas e certificações técnicas.</li>
           </ol>
@@ -1195,7 +1222,7 @@
 
         <div class="pt-6 border-t border-slate-300 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-600">
           <div>
-            <strong>Sigilo Público LGPD (Lei nº 13.709/2018):</strong> No portal público <code>asafgv.com</code> são exibidas exclusivamente as iniciais dos signatários, reservando-se a listagem nominal auditada por hash SHA-256 unicamente ao protocolo oficial perante os órgãos públicos.
+            <strong>Conformidade LGPD (Lei nº 13.709/2018):</strong> O caderno anexo contém validação de CPF único e hash individual SHA-256 por signatário.
           </div>
           <div class="font-bold text-slate-900">
             Santa Catarina, Outubro de 2026 — Diretoria A.S.A.F. (asafgv.com | @asaf.gv)
@@ -1206,21 +1233,21 @@
   </section>
 
   <!-- RODAPÉ COM LOGO OFICIAL -->
-  <footer class="no-print bg-[#040d1a] border-t border-yellow-500/20 py-8 px-4 sm:px-6 mt-12">
+  <footer class="no-print bg-[#040d1a] border-t border-slate-800 py-8 px-4 sm:px-6 mt-12">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
       <div class="flex items-center gap-3">
         <img src="assets/img/logo-asaf.png" alt="Logo ASAF" class="w-10 h-10 object-contain" />
         <div>
-          <div class="font-display font-bold text-[#f7d117] text-sm uppercase">asafgv.com • A.S.A.F. — Associação de Salvamento Aquático de Florianópolis</div>
+          <div class="font-display font-bold text-amber-300 text-sm uppercase">asafgv.com • A.S.A.F. — Associação de Salvamento Aquático de Florianópolis</div>
           <div>Mobilização Municipal e Estadual em defesa dos Guarda-Vidas Civis e Bombeiros Militares de Santa Catarina</div>
         </div>
       </div>
       <div class="flex items-center gap-4">
-        <a href="https://www.instagram.com/asaf.gv/" target="_blank" rel="noopener noreferrer" class="text-[#f7d117] hover:underline font-bold">
+        <a href="https://www.instagram.com/asaf.gv/" target="_blank" rel="noopener noreferrer" class="text-sky-300 hover:underline font-bold">
           Instagram: @asaf.gv ↗
         </a>
         <span>•</span>
-        <span>Sigilo Público por Iniciais (LGPD)</span>
+        <span>LGPD (Lei 13.709/2018)</span>
       </div>
     </div>
   </footer>

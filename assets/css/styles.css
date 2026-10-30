@@ -1,13 +1,13 @@
-/* ASAF (@asaf.gv) - Identidade Visual Oficial inspirada no Brasão da ASAF */
+/* ASAF (asafgv.com | @asaf.gv) - Identidade Visual Oficial inspirada no Brasão da ASAF */
 
 :root {
   --asaf-navy: #0c2346;
   --asaf-navy-deep: #061326;
   --asaf-blue: #0d85d8;
-  --asaf-red: #e61919;
-  --asaf-red-dark: #a80f0f;
+  --asaf-sky: #0ea5e9;
+  --asaf-flag-red: #dc2626;
   --asaf-gold: #f7d117;
-  --asaf-sand: #facc15;
+  --asaf-amber: #f59e0b;
 }
 
 html {
@@ -30,50 +30,81 @@ body {
   letter-spacing: 0.04em;
 }
 
-/* Padrão diagonal de faixa de salvamento nas cores do brasão ASAF */
+/* Padrão sutil de faixa superior */
 .rescue-stripes {
-  background: repeating-linear-gradient(
-    -45deg,
-    var(--asaf-red),
-    var(--asaf-red) 14px,
-    var(--asaf-gold) 14px,
-    var(--asaf-gold) 28px
-  );
+  background: linear-gradient(90deg, #0d85d8 0%, #f7d117 50%, #dc2626 100%);
 }
 
-/* Fundo Hero inspirado no Azul Marítimo Oficial da ASAF (#103260) e no Brasão */
+/* Fundo Hero inspirado no Azul Marítimo Oficial da ASAF (#103260) */
 .hero-bg {
   background:
-    radial-gradient(circle at 82% 24%, rgba(230, 25, 25, 0.28) 0%, transparent 42%),
+    radial-gradient(circle at 80% 22%, rgba(14, 165, 233, 0.22) 0%, transparent 45%),
     radial-gradient(circle at 18% 30%, rgba(13, 133, 216, 0.25) 0%, transparent 48%),
-    radial-gradient(circle at 50% 90%, rgba(247, 209, 23, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 50% 90%, rgba(247, 209, 23, 0.10) 0%, transparent 50%),
     linear-gradient(180deg, #091d3a 0%, #103260 52%, #061326 100%);
 }
 
-/* Efeito de brilho e destaque para o Brasão Oficial da ASAF */
+/* Botões amigáveis e modernos */
+.btn-friendly-primary {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+  color: #ffffff;
+  border: 1px solid rgba(125, 211, 252, 0.45);
+  box-shadow: 0 8px 20px -4px rgba(2, 132, 199, 0.45);
+  transition: all 0.2s ease;
+}
+
+.btn-friendly-primary:hover {
+  background: linear-gradient(135deg, #38bdf8 0%, #0369a1 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px -4px rgba(2, 132, 199, 0.6);
+}
+
+.btn-friendly-gold {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  color: #061326;
+  border: 1px solid rgba(254, 240, 138, 0.6);
+  box-shadow: 0 8px 20px -4px rgba(245, 158, 11, 0.35);
+  transition: all 0.2s ease;
+}
+
+.btn-friendly-gold:hover {
+  background: linear-gradient(135deg, #fde047 0%, #fbbf24 100%);
+  transform: translateY(-1px);
+}
+
+/* Animação suave da Bandeira Vermelha de Corrente de Retorno tremulando */
+@keyframes wave-flag {
+  0%, 100% {
+    transform: rotate(0deg) skewY(0deg);
+  }
+  50% {
+    transform: rotate(-3deg) skewY(-2deg);
+  }
+}
+
+.red-flag-wave {
+  transform-origin: left center;
+  animation: wave-flag 2.6s ease-in-out infinite;
+}
+
+/* Efeito de brilho para o Brasão Oficial da ASAF */
 .asaf-logo-glow {
-  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.65)) drop-shadow(0 0 18px rgba(247, 209, 23, 0.22));
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.65)) drop-shadow(0 0 18px rgba(14, 165, 233, 0.22));
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
 }
 
 .asaf-logo-glow:hover {
   transform: scale(1.04) rotate(-1deg);
-  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.75)) drop-shadow(0 0 26px rgba(247, 209, 23, 0.4));
-}
-
-/* Borda estilo xilogravura/brasão ASAF */
-.asaf-card-border {
-  border: 2px solid rgba(247, 209, 23, 0.35);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.75)) drop-shadow(0 0 26px rgba(247, 209, 23, 0.35));
 }
 
 /* Animação de pulso nos marcadores de praia */
 @keyframes pulse-red {
   0%, 100% {
-    box-shadow: 0 0 0 0 rgba(230, 25, 25, 0.75);
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
   }
   50% {
-    box-shadow: 0 0 0 10px rgba(230, 25, 25, 0);
+    box-shadow: 0 0 0 9px rgba(220, 38, 38, 0);
   }
 }
 
