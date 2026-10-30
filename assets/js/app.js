@@ -561,21 +561,22 @@ function atualizarContadoresEMural() {
 
   const wall = document.getElementById('supporters-wall');
   if (wall) {
-    wall.innerHTML = state.supporters.slice(0, 8).map((s) => `
-      <div class="p-3.5 rounded-xl bg-[#091b36]/90 border border-slate-800 flex items-center justify-between gap-3">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-sky-500/20 border border-sky-400/40 text-sky-300 font-bold flex items-center justify-center text-xs shrink-0">
-            ${s.initials.slice(0, 4)}
-          </div>
-          <div>
-            <div class="flex flex-wrap items-center gap-2">
-              <span class="font-bold text-white text-sm">${s.initials}</span>
-              <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 font-medium">✓ Assinatura Verificada</span>
-            </div>
-            <div class="text-xs text-slate-300">${s.location} • <span class="text-amber-300">${s.profile}</span></div>
-          </div>
+    wall.innerHTML = state.supporters.slice(0, 6).map((s) => `
+      <div class="p-2.5 rounded-xl bg-[#091b36]/90 border border-slate-800/90 flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-full bg-sky-500/20 border border-sky-400/40 text-sky-300 font-bold flex items-center justify-center text-[11px] shrink-0">
+          ${s.initials.slice(0, 4)}
         </div>
-        <span class="text-xs text-slate-400 shrink-0">${s.time}</span>
+        <div class="min-w-0 flex-1">
+          <div class="flex items-center justify-between gap-1">
+            <div class="flex items-center gap-1 min-w-0">
+              <span class="font-bold text-white text-xs truncate">${s.initials}</span>
+              <span class="text-[10px] text-emerald-400 font-semibold shrink-0" title="Assinatura Verificada">✓</span>
+            </div>
+            <span class="text-[10px] text-slate-400 shrink-0">${s.time}</span>
+          </div>
+          <div class="text-[11px] text-slate-300 truncate">${s.location}</div>
+          <div class="text-[10px] text-amber-300 font-medium truncate">${s.profile}</div>
+        </div>
       </div>
     `).join('');
   }

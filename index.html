@@ -163,36 +163,37 @@
           </div>
         </div>
 
-        <!-- Coluna Direita: Card de Petição Rápida -->
-        <div class="lg:col-span-5">
-          <div class="bg-[#061326]/95 border border-sky-400/40 rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+        <!-- Coluna Direita: Card de Petição Rápida + Últimas Assinaturas Compacto -->
+        <div class="lg:col-span-5 space-y-4">
+          <!-- Card Principal: Assinar Petição Agora -->
+          <div class="bg-[#061326]/95 border border-sky-400/40 rounded-2xl p-5 sm:p-6 shadow-2xl relative overflow-hidden">
             <div class="absolute top-0 left-0 right-0 h-1.5 rescue-stripes"></div>
 
-            <div class="flex items-center justify-between mb-4 pt-1">
+            <div class="flex items-center justify-between mb-3 pt-1">
               <div class="flex items-center gap-2">
-                <img src="assets/img/logo-asaf.png" alt="Selo ASAF" class="w-9 h-9 object-contain" />
+                <img src="assets/img/logo-asaf.png" alt="Selo ASAF" class="w-8 h-8 object-contain" />
                 <span class="px-2.5 py-1 rounded-md bg-sky-500/20 border border-sky-400/40 text-sky-200 font-bold text-xs uppercase">Mobilização Estadual SC</span>
               </div>
               <span class="text-xs text-emerald-400 font-semibold flex items-center gap-1">✓ Petição Auditável</span>
             </div>
 
-            <h3 class="font-display text-2xl font-bold text-white uppercase mb-2">
+            <h3 class="font-display text-2xl font-bold text-white uppercase mb-1.5">
               Fortaleça os Guarda-Vidas em Santa Catarina
             </h3>
-            <p class="text-xs sm:text-sm text-slate-300 mb-5">
-              Sua assinatura apoia a revisão da <strong>Lei Estadual nº 13.880/2006</strong>, melhores condições de trabalho para os GVCs e cobertura de salvamento nas praias durante todo o ano.
+            <p class="text-xs sm:text-sm text-slate-300 mb-4">
+              Sua assinatura apoia a revisão da <strong>Lei Estadual nº 13.880/2006</strong>, as <strong>5 pautas oficiais da categoria</strong> e a presença de guarda-vidas nas praias o ano inteiro.
             </p>
 
             <!-- Termômetro de Assinaturas Estadual -->
-            <div class="bg-[#0a1e3c]/80 p-4 rounded-xl border border-sky-500/30 mb-5">
-              <div class="flex justify-between items-baseline mb-2">
+            <div class="bg-[#0a1e3c]/80 p-3.5 rounded-xl border border-sky-500/30 mb-4">
+              <div class="flex justify-between items-baseline mb-1.5">
                 <div>
                   <span class="font-display text-3xl font-bold text-amber-300 sig-counter-num">6.412</span>
                   <span class="text-xs text-sky-200 ml-1">assinaturas em SC</span>
                 </div>
                 <span class="text-xs font-bold text-white">Meta: 15.000</span>
               </div>
-              <div class="w-full h-3.5 bg-slate-950 rounded-full overflow-hidden border border-slate-700">
+              <div class="w-full h-3 bg-slate-950 rounded-full overflow-hidden border border-slate-700">
                 <div class="h-full bg-gradient-to-r from-sky-500 via-sky-400 to-amber-300 sig-progress-bar transition-all duration-500" style="width: 42.7%"></div>
               </div>
               <div class="mt-2 flex items-center justify-between text-[11px] text-sky-200/80">
@@ -201,76 +202,147 @@
               </div>
             </div>
 
-            <!-- Resumo das 5 Pautas -->
-            <div class="text-xs font-bold uppercase tracking-wider text-sky-300 mb-2.5">
-              ✊ Nossas 5 Pautas Principais:
-            </div>
-            <ul class="space-y-2 text-xs sm:text-sm text-slate-100 mb-6">
-              <li class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-sky-500/25 border border-sky-400/50 text-sky-200 font-bold text-xs flex items-center justify-center shrink-0">1</span> <span><strong>Reajuste Digno</strong> das diárias e remuneração;</span></li>
-              <li class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-sky-500/25 border border-sky-400/50 text-sky-200 font-bold text-xs flex items-center justify-center shrink-0">2</span> <span><strong>Redução de Carga Horária</strong> sem redução salarial;</span></li>
-              <li class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-sky-500/25 border border-sky-400/50 text-sky-200 font-bold text-xs flex items-center justify-center shrink-0">3</span> <span><strong>Guarda-Vidas o Ano Inteiro</strong> nas praias;</span></li>
-              <li class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-sky-500/25 border border-sky-400/50 text-sky-200 font-bold text-xs flex items-center justify-center shrink-0">4</span> <span><strong>Contratação Digna</strong> (fim do "voluntariado" precário);</span></li>
-              <li class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-sky-500/25 border border-sky-400/50 text-sky-200 font-bold text-xs flex items-center justify-center shrink-0">5</span> <span><strong>Plano de Carreira</strong> para os guarda-vidas.</span></li>
-            </ul>
-
-            <button onclick="switchScreen('peticao')" class="w-full py-4 rounded-xl btn-friendly-gold font-extrabold text-base uppercase tracking-wide">
+            <button onclick="switchScreen('peticao')" class="w-full py-3.5 rounded-xl btn-friendly-gold font-extrabold text-base uppercase tracking-wide">
               Assinar a Petição Agora →
             </button>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- SEÇÃO EDUCATIVA E OPERACIONAL: A BANDEIRA VERMELHA E A MARÉ DE RETORNO -->
-    <section class="py-12 px-4 sm:px-6 bg-[#081933] border-b border-slate-800">
-      <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <a href="https://www.instagram.com/p/DPR1j25jy28/" target="_blank" rel="noopener noreferrer" class="lg:col-span-5 relative rounded-2xl overflow-hidden border border-slate-700 hover:border-sky-400/60 shadow-xl group block">
-            <img src="assets/img/post4.jpg" alt="Guarda-Vidas fincando a Bandeira Vermelha de corrente de retorno na praia"
-              class="w-full h-80 sm:h-96 object-cover object-center group-hover:scale-105 transition-transform duration-300" />
-            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-950/85 to-transparent p-4">
-              <div class="flex items-center justify-between gap-2">
-                <span class="px-2.5 py-0.5 rounded bg-red-600 text-white text-[11px] font-bold uppercase">Prevenção Diária na Areia</span>
-                <span class="text-xs font-bold text-sky-300 group-hover:underline">Ver post no Instagram ↗</span>
+          <!-- Mobilização em Tempo Real Compacta (Logo Abaixo do Card de Petição) -->
+          <div class="bg-[#061326]/90 border border-slate-700/80 rounded-2xl p-4 shadow-xl">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <div>
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-sky-400 block leading-none">Mobilização em Tempo Real</span>
+                  <h4 class="font-display text-base font-bold text-white uppercase leading-tight mt-0.5">
+                    Últimas Assinaturas em Santa Catarina
+                  </h4>
+                </div>
               </div>
-              <p class="text-xs text-slate-200 mt-1">Guarda-vidas posicionando a Bandeira Vermelha para demarcar a corrente de retorno em Florianópolis.</p>
+              <button onclick="switchScreen('peticao')" class="text-[11px] font-bold text-sky-300 hover:text-white underline shrink-0">
+                Participar →
+              </button>
             </div>
-          </a>
 
-          <div class="lg:col-span-7 space-y-4">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/15 border border-red-500/30 text-red-300 text-xs font-bold uppercase">
-              <span>🚩 Entenda o Trabalho do Guarda-Vidas</span>
-            </div>
-            <h2 class="font-display text-3xl sm:text-4xl font-bold text-white uppercase">
-              A Bandeira Vermelha e o Perigo Invisível da Maré de Retorno
-            </h2>
-            <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
-              Para quem olha da areia, o local onde as ondas <strong>não estão quebrando</strong> parece uma "piscina calma". Na verdade, é ali que atua a <strong>maré de retorno (corrente de retorno)</strong>: uma vala profunda que puxa rapidamente o banhista para o mar aberto.
-            </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              <div class="p-4 rounded-xl bg-[#061326] border border-red-500/30">
-                <div class="font-bold text-red-400 text-sm mb-1 flex items-center gap-2">
-                  <span>🚩</span> <span>Com Guarda-Vidas na Praia</span>
-                </div>
-                <p class="text-xs text-slate-300 leading-relaxed">
-                  O GVC lê a formação dos bancos de areia a cada mudança de maré, finca a <strong>Bandeira Vermelha</strong> exatamente em frente à corrente de retorno e orienta preventivamente os banhistas com o apito antes que o afogamento aconteça.
-                </p>
-              </div>
-              <div class="p-4 rounded-xl bg-[#061326] border border-slate-700">
-                <div class="font-bold text-amber-300 text-sm mb-1 flex items-center gap-2">
-                  <span>⚠️</span> <span>Praia Sem GVC Fora de Temporada</span>
-                </div>
-                <p class="text-xs text-slate-300 leading-relaxed">
-                  Quando os postos são fechados no outono, inverno e primavera, <strong>ninguém demarca as correntes de retorno com a bandeira vermelha</strong>. Famílias, turistas e surfistas entram no canal de retorno sem nenhum aviso.
-                </p>
-              </div>
-            </div>
+            <div id="supporters-wall" class="grid grid-cols-1 sm:grid-cols-2 gap-2"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SEÇÃO: ENGINE DE NOTÍCIAS E PUBLICAÇÕES (asafgv.com) -->
+    <!-- SEÇÃO: AS 5 PAUTAS REIVINDICATÓRIAS DA ASAF (LOGO APÓS O TOPO) -->
+    <section class="py-14 px-4 sm:px-6 max-w-7xl mx-auto border-b border-slate-800/80">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <span class="text-xs font-bold uppercase tracking-widest text-sky-400">5 Punhos Erguidos no Mar • Pauta Municipal e Estadual</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white uppercase mt-1">
+          As 5 Pautas Oficiais da A.S.A.F.
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-[#0a1e3c]/80 border border-slate-700/80 hover:border-sky-400/60 rounded-2xl p-6 transition-all flex flex-col justify-between shadow-lg">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-11 h-11 rounded-xl bg-sky-500/20 border border-sky-400/40 text-sky-300 font-display font-bold text-xl flex items-center justify-center">01</span>
+              <span class="text-xs px-2.5 py-1 rounded bg-[#061326] text-sky-300 border border-sky-400/20 font-semibold">Valorização Financeira</span>
+            </div>
+            <h3 class="font-display text-xl font-bold text-white uppercase mb-2">Reajuste Digno Já</h3>
+            <p class="text-sm text-slate-200 leading-relaxed mb-4">
+              Atualização real dos valores pagos aos Guarda-Vidas Civis em Santa Catarina, hoje corroídos pela inflação e incompatíveis com o custo de vida no litoral e o risco da atividade.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-700/80 text-xs text-amber-300 font-semibold">
+            ✓ Recomposição inflacionária + valorização real do turno trabalhado.
+          </div>
+        </div>
+
+        <div class="bg-[#0a1e3c]/80 border border-slate-700/80 hover:border-sky-400/60 rounded-2xl p-6 transition-all flex flex-col justify-between shadow-lg">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-11 h-11 rounded-xl bg-sky-500/20 border border-sky-400/40 text-sky-300 font-display font-bold text-xl flex items-center justify-center">02</span>
+              <span class="text-xs px-2.5 py-1 rounded bg-[#061326] text-sky-300 border border-sky-400/20 font-semibold">Saúde & Prontidão</span>
+            </div>
+            <h3 class="font-display text-xl font-bold text-white uppercase mb-2">Redução de Carga Horária sem Redução de Salário</h3>
+            <p class="text-sm text-slate-200 leading-relaxed mb-4">
+              Escalas extenuantes de <strong>9h a 12h diárias</strong> sob insolação severa geram exaustão física extrema. Defendemos turnos humanizados de 6h sem nenhuma perda salarial/diária.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-700/80 text-xs text-amber-300 font-semibold">
+            ✓ Turnos seguros (6h) mantendo 100% da remuneração.
+          </div>
+        </div>
+
+        <div class="bg-[#0a1e3c]/80 border border-slate-700/80 hover:border-sky-400/60 rounded-2xl p-6 transition-all flex flex-col justify-between shadow-lg">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-11 h-11 rounded-xl bg-sky-500/20 border border-sky-400/40 text-sky-300 font-display font-bold text-xl flex items-center justify-center">03</span>
+              <span class="text-xs px-2.5 py-1 rounded bg-[#061326] text-amber-300 border border-amber-400/30 font-semibold">Vidas o Ano Todo</span>
+            </div>
+            <h3 class="font-display text-xl font-bold text-white uppercase mb-2">Guarda-Vidas o Ano Inteiro</h3>
+            <p class="text-sm text-slate-200 leading-relaxed mb-4">
+              Florianópolis e o litoral de SC recebem surfistas, moradores e turistas de janeiro a janeiro. Manter postos ativos garante sinalização das correntes de retorno e resgate rápido o ano todo.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-700/80 text-xs text-amber-300 font-semibold">
+            ✓ Postos de salvamento ativos durante os 12 meses do ano.
+          </div>
+        </div>
+
+        <div class="bg-[#0a1e3c]/80 border border-slate-700/80 hover:border-sky-400/60 rounded-2xl p-6 transition-all flex flex-col justify-between shadow-lg">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-11 h-11 rounded-xl bg-sky-500/20 border border-sky-400/40 text-sky-300 font-display font-bold text-xl flex items-center justify-center">04</span>
+              <span class="text-xs px-2.5 py-1 rounded bg-[#061326] text-sky-300 border border-sky-400/20 font-semibold">Fim do Sucateamento</span>
+            </div>
+            <h3 class="font-display text-xl font-bold text-white uppercase mb-2">Contratação Digna</h3>
+            <p class="text-sm text-slate-200 leading-relaxed mb-4">
+              Superação do modelo precário de "voluntariado" (Lei Estadual nº 13.880/2006) que nega FGTS, 13º salário, férias e amparo previdenciário adequado a quem arrisca a vida no mar.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-700/80 text-xs text-amber-300 font-semibold">
+            ✓ Vínculo formal digno, direitos trabalhistas e EPIs estruturados.
+          </div>
+        </div>
+
+        <div class="bg-[#0a1e3c]/80 border border-slate-700/80 hover:border-sky-400/60 rounded-2xl p-6 transition-all flex flex-col justify-between shadow-lg">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-11 h-11 rounded-xl bg-sky-500/20 border border-sky-400/40 text-sky-300 font-display font-bold text-xl flex items-center justify-center">05</span>
+              <span class="text-xs px-2.5 py-1 rounded bg-[#061326] text-sky-300 border border-sky-400/20 font-semibold">Futuro Profissional</span>
+            </div>
+            <h3 class="font-display text-xl font-bold text-white uppercase mb-2">Plano de Carreira</h3>
+            <p class="text-sm text-slate-200 leading-relaxed mb-4">
+              Reconhecimento das temporadas trabalhadas, recertificações e experiência acumulada pelos guarda-vidas no litoral catarinense.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-700/80 text-xs text-amber-300 font-semibold">
+            ✓ Progressão por tempo de serviço e qualificação técnica.
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-br from-sky-900/40 via-[#0a1e3c] to-[#061326] border border-sky-400/40 rounded-2xl p-6 flex flex-col justify-between">
+          <div class="flex items-center gap-3 mb-3">
+            <img src="assets/img/logo-asaf.png" alt="Logo ASAF" class="w-14 h-14 object-contain shrink-0" />
+            <div>
+              <span class="inline-block px-2.5 py-0.5 rounded bg-sky-500/20 border border-sky-400/40 text-sky-200 font-bold text-[11px] uppercase">
+                Comunidade & Categoria
+              </span>
+              <h3 class="font-display text-lg font-bold text-white uppercase mt-1">
+                Portal Integrado asafgv.com
+              </h3>
+            </div>
+          </div>
+          <p class="text-sm text-slate-100 leading-relaxed mb-4">
+            Banhistas podem tirar dúvidas sobre correntes de retorno e indicar praias sem cobertura; GVCs contam com mural interno e agenda da associação.
+          </p>
+          <button onclick="switchScreen('guardavidas')" class="w-full py-3 rounded-xl btn-friendly-primary font-extrabold text-sm uppercase">
+            Acessar Portal (Banhista / GVC / Admin) →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: NOTÍCIAS E PUBLICAÇÕES (asafgv.com) -->
     <section class="py-14 px-4 sm:px-6 bg-[#061326] border-b border-slate-800">
       <div class="max-w-7xl mx-auto">
         <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
@@ -383,120 +455,8 @@
       </div>
     </section>
 
-    <!-- SEÇÃO: AS 5 PAUTAS REIVINDICATÓRIAS DA ASAF -->
-    <section class="py-16 px-4 sm:px-6 max-w-7xl mx-auto">
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="text-xs font-bold uppercase tracking-widest text-sky-400">5 Punhos Erguidos no Mar • Pauta Municipal e Estadual</span>
-        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white uppercase mt-1">
-          As 5 Pautas Oficiais da A.S.A.F.
-        </h2>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-[#0a1e3c]/80 border border-slate-700/80 hover:border-sky-400/60 rounded-2xl p-6 transition-all flex flex-col justify-between shadow-lg">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="w-11 h-11 rounded-xl bg-sky-500/20 border border-sky-400/40 text-sky-300 font-display font-bold text-xl flex items-center justify-center">01</span>
-              <span class="text-xs px-2.5 py-1 rounded bg-[#061326] text-sky-300 border border-sky-400/20 font-semibold">Valorização Financeira</span>
-            </div>
-            <h3 class="font-display text-xl font-bold text-white uppercase mb-2">Reajuste Digno Já</h3>
-            <p class="text-sm text-slate-200 leading-relaxed mb-4">
-              Atualização real dos valores pagos aos Guarda-Vidas Civis em Santa Catarina, hoje corroídos pela inflação e incompatíveis com o custo de vida no litoral e o risco da atividade.
-            </p>
-          </div>
-          <div class="pt-3 border-t border-slate-700/80 text-xs text-amber-300 font-semibold">
-            ✓ Recomposição inflacionária + valorização real do turno trabalhado.
-          </div>
-        </div>
-
-        <div class="bg-[#0a1e3c]/80 border border-slate-700/80 hover:border-sky-400/60 rounded-2xl p-6 transition-all flex flex-col justify-between shadow-lg">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="w-11 h-11 rounded-xl bg-sky-500/20 border border-sky-400/40 text-sky-300 font-display font-bold text-xl flex items-center justify-center">02</span>
-              <span class="text-xs px-2.5 py-1 rounded bg-[#061326] text-sky-300 border border-sky-400/20 font-semibold">Saúde & Prontidão</span>
-            </div>
-            <h3 class="font-display text-xl font-bold text-white uppercase mb-2">Redução de Carga Horária sem Redução de Salário</h3>
-            <p class="text-sm text-slate-200 leading-relaxed mb-4">
-              Escalas extenuantes de <strong>9h a 12h diárias</strong> sob insolação severa geram exaustão física extrema. Defendemos turnos humanizados de 6h sem nenhuma perda salarial/diária.
-            </p>
-          </div>
-          <div class="pt-3 border-t border-slate-700/80 text-xs text-amber-300 font-semibold">
-            ✓ Turnos seguros (6h) mantendo 100% da remuneração.
-          </div>
-        </div>
-
-        <div class="bg-[#0a1e3c]/80 border border-slate-700/80 hover:border-sky-400/60 rounded-2xl p-6 transition-all flex flex-col justify-between shadow-lg">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="w-11 h-11 rounded-xl bg-sky-500/20 border border-sky-400/40 text-sky-300 font-display font-bold text-xl flex items-center justify-center">03</span>
-              <span class="text-xs px-2.5 py-1 rounded bg-[#061326] text-amber-300 border border-amber-400/30 font-semibold">Vidas o Ano Todo</span>
-            </div>
-            <h3 class="font-display text-xl font-bold text-white uppercase mb-2">Guarda-Vidas o Ano Inteiro</h3>
-            <p class="text-sm text-slate-200 leading-relaxed mb-4">
-              Florianópolis e o litoral de SC recebem surfistas, moradores e turistas de janeiro a janeiro. Manter postos ativos garante sinalização das correntes de retorno e resgate rápido o ano todo.
-            </p>
-          </div>
-          <div class="pt-3 border-t border-slate-700/80 text-xs text-amber-300 font-semibold">
-            ✓ Postos de salvamento ativos durante os 12 meses do ano.
-          </div>
-        </div>
-
-        <div class="bg-[#0a1e3c]/80 border border-slate-700/80 hover:border-sky-400/60 rounded-2xl p-6 transition-all flex flex-col justify-between shadow-lg">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="w-11 h-11 rounded-xl bg-sky-500/20 border border-sky-400/40 text-sky-300 font-display font-bold text-xl flex items-center justify-center">04</span>
-              <span class="text-xs px-2.5 py-1 rounded bg-[#061326] text-sky-300 border border-sky-400/20 font-semibold">Fim do Sucateamento</span>
-            </div>
-            <h3 class="font-display text-xl font-bold text-white uppercase mb-2">Contratação Digna</h3>
-            <p class="text-sm text-slate-200 leading-relaxed mb-4">
-              Superação do modelo precário de "voluntariado" (Lei Estadual nº 13.880/2006) que nega FGTS, 13º salário, férias e amparo previdenciário adequado a quem arrisca a vida no mar.
-            </p>
-          </div>
-          <div class="pt-3 border-t border-slate-700/80 text-xs text-amber-300 font-semibold">
-            ✓ Vínculo formal digno, direitos trabalhistas e EPIs estruturados.
-          </div>
-        </div>
-
-        <div class="bg-[#0a1e3c]/80 border border-slate-700/80 hover:border-sky-400/60 rounded-2xl p-6 transition-all flex flex-col justify-between shadow-lg">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="w-11 h-11 rounded-xl bg-sky-500/20 border border-sky-400/40 text-sky-300 font-display font-bold text-xl flex items-center justify-center">05</span>
-              <span class="text-xs px-2.5 py-1 rounded bg-[#061326] text-sky-300 border border-sky-400/20 font-semibold">Futuro Profissional</span>
-            </div>
-            <h3 class="font-display text-xl font-bold text-white uppercase mb-2">Plano de Carreira</h3>
-            <p class="text-sm text-slate-200 leading-relaxed mb-4">
-              Reconhecimento das temporadas trabalhadas, recertificações e experiência acumulada pelos guarda-vidas no litoral catarinense.
-            </p>
-          </div>
-          <div class="pt-3 border-t border-slate-700/80 text-xs text-amber-300 font-semibold">
-            ✓ Progressão por tempo de serviço e qualificação técnica.
-          </div>
-        </div>
-
-        <div class="bg-gradient-to-br from-sky-900/40 via-[#0a1e3c] to-[#061326] border border-sky-400/40 rounded-2xl p-6 flex flex-col justify-between">
-          <div class="flex items-center gap-3 mb-3">
-            <img src="assets/img/logo-asaf.png" alt="Logo ASAF" class="w-14 h-14 object-contain shrink-0" />
-            <div>
-              <span class="inline-block px-2.5 py-0.5 rounded bg-sky-500/20 border border-sky-400/40 text-sky-200 font-bold text-[11px] uppercase">
-                Comunidade & Categoria
-              </span>
-              <h3 class="font-display text-lg font-bold text-white uppercase mt-1">
-                Portal Integrado asafgv.com
-              </h3>
-            </div>
-          </div>
-          <p class="text-sm text-slate-100 leading-relaxed mb-4">
-            Banhistas podem tirar dúvidas sobre correntes de retorno e indicar praias sem cobertura; GVCs contam com mural interno e agenda da associação.
-          </p>
-          <button onclick="switchScreen('guardavidas')" class="w-full py-3 rounded-xl btn-friendly-primary font-extrabold text-sm uppercase">
-            Acessar Portal (Banhista / GVC / Admin) →
-          </button>
-        </div>
-      </div>
-    </section>
-
     <!-- SEÇÃO INTERATIVA: MAPA/PAINEL DAS PRAIAS FORA DE TEMPORADA -->
-    <section class="py-16 px-4 sm:px-6 bg-[#091b36] border-y border-slate-800">
+    <section class="py-16 px-4 sm:px-6 bg-[#091b36] border-b border-slate-800">
       <div class="max-w-7xl mx-auto">
         <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
           <div>
@@ -524,24 +484,51 @@
       </div>
     </section>
 
-    <!-- SEÇÃO: MURAL PÚBLICO DE APOIADORES -->
-    <section class="py-16 px-4 sm:px-6 max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-        <div class="lg:col-span-5 space-y-4">
-          <span class="text-xs font-bold uppercase tracking-widest text-sky-400">Mobilização em Tempo Real</span>
-          <h3 class="font-display text-3xl font-bold text-white uppercase">
-            Últimas Assinaturas em Santa Catarina
-          </h3>
-          <p class="text-sm text-slate-300 leading-relaxed">
-            Moradores, banhistas, surfistas, guarda-vidas civis e bombeiros militares de todas as regiões de Santa Catarina juntos pelas 5 pautas da A.S.A.F.
-          </p>
-          <button onclick="switchScreen('peticao')" class="w-full py-3.5 rounded-xl btn-friendly-primary font-extrabold text-sm uppercase">
-            Participar e Assinar a Petição →
-          </button>
-        </div>
+    <!-- SEÇÃO EDUCATIVA E OPERACIONAL (POR ÚLTIMO): ENTENDA O TRABALHO DO GUARDA-VIDAS -->
+    <section class="py-14 px-4 sm:px-6 bg-[#081933]">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <a href="https://www.instagram.com/p/DPR1j25jy28/" target="_blank" rel="noopener noreferrer" class="lg:col-span-5 relative rounded-2xl overflow-hidden border border-slate-700 hover:border-sky-400/60 shadow-xl group block">
+            <img src="assets/img/post4.jpg" alt="Guarda-Vidas fincando a Bandeira Vermelha de corrente de retorno na praia"
+              class="w-full h-80 sm:h-96 object-cover object-center group-hover:scale-105 transition-transform duration-300" />
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-950/85 to-transparent p-4">
+              <div class="flex items-center justify-between gap-2">
+                <span class="px-2.5 py-0.5 rounded bg-red-600 text-white text-[11px] font-bold uppercase">Prevenção Diária na Areia</span>
+                <span class="text-xs font-bold text-sky-300 group-hover:underline">Ver post no Instagram ↗</span>
+              </div>
+              <p class="text-xs text-slate-200 mt-1">Guarda-vidas posicionando a Bandeira Vermelha para demarcar a corrente de retorno em Florianópolis.</p>
+            </div>
+          </a>
 
-        <div class="lg:col-span-7">
-          <div id="supporters-wall" class="grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
+          <div class="lg:col-span-7 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/15 border border-red-500/30 text-red-300 text-xs font-bold uppercase">
+              <span>🚩 Entenda o Trabalho do Guarda-Vidas</span>
+            </div>
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-white uppercase">
+              A Bandeira Vermelha e o Perigo Invisível da Maré de Retorno
+            </h2>
+            <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+              Para quem olha da areia, o local onde as ondas <strong>não estão quebrando</strong> parece uma "piscina calma". Na verdade, é ali que atua a <strong>maré de retorno (corrente de retorno)</strong>: uma vala profunda que puxa rapidamente o banhista para o mar aberto.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div class="p-4 rounded-xl bg-[#061326] border border-red-500/30">
+                <div class="font-bold text-red-400 text-sm mb-1 flex items-center gap-2">
+                  <span>🚩</span> <span>Com Guarda-Vidas na Praia</span>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  O GVC lê a formação dos bancos de areia a cada mudança de maré, finca a <strong>Bandeira Vermelha</strong> exatamente em frente à corrente de retorno e orienta preventivamente os banhistas com o apito antes que o afogamento aconteça.
+                </p>
+              </div>
+              <div class="p-4 rounded-xl bg-[#061326] border border-slate-700">
+                <div class="font-bold text-amber-300 text-sm mb-1 flex items-center gap-2">
+                  <span>⚠️</span> <span>Praia Sem GVC Fora de Temporada</span>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  Quando os postos são fechados no outono, inverno e primavera, <strong>ninguém demarca as correntes de retorno com a bandeira vermelha</strong>. Famílias, turistas e surfistas entram no canal de retorno sem nenhum aviso.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
