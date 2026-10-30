@@ -225,7 +225,7 @@ function setRoleView(role) {
   if (badge) {
     const labels = {
       banhista: '🏖️ Painel: Banhista',
-      gvc: '🛟 Painel: GVC',
+      gvc: '🚩 Painel: GVC',
       admin: '🛡️ Painel: Admin'
     };
     badge.textContent = labels[role] || 'Acessar Portal';
@@ -686,7 +686,7 @@ function renderizarDuvidas() {
       <p class="text-sm font-semibold text-white">❓ "${q.question}"</p>
       ${q.status === 'answered' ? `
         <div class="p-3 rounded-lg bg-[#091b36] border border-emerald-500/30 text-xs text-slate-200 space-y-1">
-          <div class="font-bold text-amber-300">🛟 ${q.answeredBy}:</div>
+          <div class="font-bold text-amber-300">🚩 ${q.answeredBy}:</div>
           <p>${q.answer}</p>
         </div>
       ` : ''}
