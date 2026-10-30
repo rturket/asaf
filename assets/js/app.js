@@ -115,12 +115,12 @@ const state = {
     },
     {
       id: 'm-4',
-      author: 'Usuário Externo (Spam Removido)',
-      badge: 'Moderado',
+      author: 'Mensagem Moderada',
+      badge: 'Arquivada',
       time: 'Ontem, 14:10',
-      content: 'Mensagem fora de tópico removida pela moderação para demonstrar o Soft Delete no banco Django.',
+      content: 'Exemplo de publicação fora de tópico que foi ocultada pela diretoria (não aparece para os GVCs, mas pode ser restaurada pelo Admin).',
       isDeleted: true,
-      deletedInfo: 'Soft Delete por Admin em 29/10/2026 15:02 (Mantido no banco p/ auditoria)'
+      deletedInfo: 'Ocultada pela Administração em 29/10/2026 às 15:02'
     }
   ],
   agendaSlots: [
@@ -747,7 +747,7 @@ function softDeleteMuralPost(postId) {
   if (!post) return;
   post.isDeleted = true;
   const now = new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
-  post.deletedInfo = `Soft Delete por Admin às ${now} (is_deleted=True no PostgreSQL/Django)`;
+  post.deletedInfo = `Ocultada pela Administração às ${now}`;
   renderizarMuralInterno();
 }
 
@@ -786,23 +786,23 @@ function renderizarMuralInterno() {
           <div class="flex items-center gap-2">
             <span class="font-bold text-white text-xs sm:text-sm">${p.author}</span>
             <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase ${p.isDeleted ? 'bg-red-600 text-white' : 'bg-sky-500/20 text-sky-300'}">
-              ${p.isDeleted ? '🗑️ SOFT DELETED' : p.badge}
+              ${p.isDeleted ? 'OCULTADA NO MURAL' : p.badge}
             </span>
           </div>
           <div>
             ${p.isDeleted ? `
               <button onclick="restaurarMuralPost('${p.id}')" class="px-2.5 py-1 rounded bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] font-bold">
-                ↩ Restaurar Registro
+                ↩ Restaurar no Mural
               </button>
             ` : `
               <button onclick="softDeleteMuralPost('${p.id}')" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-red-600 text-slate-300 hover:text-white text-[11px] font-bold transition-colors">
-                🗑️ Ocultar (Soft Delete)
+                🗑️ Ocultar do Mural
               </button>
             `}
           </div>
         </div>
         <p class="text-xs sm:text-sm text-slate-200">${p.content}</p>
-        ${p.isDeleted ? `<div class="mt-2 text-[11px] font-mono text-red-300">Auditoria Django: ${p.deletedInfo}</div>` : ''}
+        ${p.isDeleted ? `<div class="mt-2 text-[11px] text-amber-300">Histórico: ${p.deletedInfo}</div>` : ''}
       </div>
     `).join('');
   }

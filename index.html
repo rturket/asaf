@@ -35,7 +35,7 @@
           4. Portal (Banhista / GVC / Admin)
         </button>
         <button onclick="switchScreen('transparencia')" data-screen-btn="transparencia" class="px-2.5 py-1 rounded text-xs font-semibold border transition-all bg-slate-800/80 text-slate-300 border-slate-700 hover:text-white">
-          5. Dossiê & Arquitetura
+          5. Ofício & Como Funciona
         </button>
       </div>
     </div>
@@ -786,7 +786,7 @@
               <span id="rec-time" class="font-mono text-slate-200">30/10/2026 10:05:18 BRT (UTC-3)</span>
             </div>
             <div>
-              <div class="text-xs text-slate-400 mb-1">Hash Criptográfico SHA-256 de Integridade:</div>
+              <div class="text-xs text-slate-400 mb-1">Código de Autenticidade da Assinatura:</div>
               <div id="rec-hash" class="p-2 rounded bg-slate-950 font-mono text-[11px] text-emerald-400 break-all border border-slate-800">
                 8f4b2e9c1a7d3056f89c0e1d4a7b2c6e9f1a3b5d7e9f0c2a4b6d8e0f1a2b3c4d
               </div>
@@ -1073,18 +1073,18 @@
       </div>
 
       <!-- =============================================================== -->
-      <!-- PAINEL 3: VISÃO DO PERFIL ADMIN (CONTROLE TOTAL + SOFT DELETE)  -->
+      <!-- PAINEL 3: VISÃO DO PERFIL ADMIN (DIRETORIA ASAF)                -->
       <!-- =============================================================== -->
       <div id="panel-role-admin" class="hidden space-y-8">
         <div class="p-4 rounded-xl bg-slate-900 border border-amber-400/50 flex flex-wrap items-center justify-between gap-4">
           <div>
             <span class="text-xs font-bold uppercase text-amber-300">Visão Ativa: PERFIL ADMIN (DIRETORIA ASAF)</span>
             <p class="text-xs sm:text-sm text-slate-200 mt-0.5">
-              Controle Total: Métricas estaduais de assinaturas, Moderação do Mural Interno com <strong>Soft Delete</strong> (padrão Django <code>semferrao.com</code>), Gestão de Horários na Agenda e Engine de Notícias.
+              Painel da Diretoria: Acompanhamento das métricas de assinaturas em SC, moderação segura do Mural Interno (com arquivo de mensagens ocultadas), gestão de horários na Agenda e publicação de notícias.
             </p>
           </div>
           <button onclick="exportarAmostraCSV()" class="px-4 py-2 rounded-lg btn-friendly-primary font-bold text-xs uppercase">
-            📥 Exportar Relatório de Assinaturas (CSV)
+            📥 Exportar Relatório de Assinaturas (Planilha)
           </button>
         </div>
 
@@ -1116,21 +1116,21 @@
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          <!-- Moderação do Mural Interno com Soft Delete -->
+          <!-- Moderação do Mural Interno -->
           <div class="lg:col-span-6 bg-[#091b36] border border-slate-700 rounded-2xl p-6 space-y-4">
             <div class="flex items-center justify-between">
               <div>
-                <span class="text-xs font-bold uppercase text-amber-300">Auditoria & Soft Delete (Django BaseAuditModel)</span>
+                <span class="text-xs font-bold uppercase text-amber-300">Moderação Segura com Histórico</span>
                 <h3 class="font-display text-2xl font-bold text-white uppercase">Moderar Mensagens do Mural Interno</h3>
               </div>
             </div>
             <p class="text-xs text-slate-300">
-              Ao ocultar uma mensagem, ela recebe <code>is_deleted=True</code> e <code>deleted_at</code>, saindo da visão dos GVCs sem perder o registro no banco de dados:
+              Ao ocultar uma mensagem inadequada, ela deixa de aparecer no mural dos guarda-vidas imediatamente, mas fica guardada no histórico da administração caso precise ser consultada ou restaurada:
             </p>
             <div id="mural-list-admin" class="space-y-3"></div>
           </div>
 
-          <!-- Administrar Horários nas Agendas + Engine de Notícias -->
+          <!-- Administrar Horários nas Agendas + Publicações -->
           <div class="lg:col-span-6 space-y-6">
             <div class="bg-[#091b36] border border-slate-700 rounded-2xl p-6 space-y-4">
               <div>
@@ -1157,8 +1157,8 @@
 
             <div class="bg-[#091b36] border border-slate-700 rounded-2xl p-6 space-y-4">
               <div>
-                <span class="text-xs font-bold uppercase text-emerald-400">CMS Django • asafgv.com</span>
-                <h3 class="font-display text-2xl font-bold text-white uppercase">Engine de Notícias e Publicações</h3>
+                <span class="text-xs font-bold uppercase text-emerald-400">Central de Comunicação • asafgv.com</span>
+                <h3 class="font-display text-2xl font-bold text-white uppercase">Publicar Notícias e Comunicados</h3>
               </div>
 
               <form onsubmit="publicarNoticiaAdmin(event)" class="space-y-3">
@@ -1190,20 +1190,20 @@
   </section>
 
   <!-- ===================================================================== -->
-  <!-- TELA 5: DOSSIÊ ESTADUAL SC + ARQUITETURA DJANGO (PADRÃO SEMFERRAO)    -->
+  <!-- TELA 5: OFÍCIO ESTADUAL SC + FUNCIONALIDADES DO PORTAL                -->
   <!-- ===================================================================== -->
   <section id="screen-transparencia" class="screen-view flex-1 py-12 px-4 sm:px-6">
     <div class="max-w-5xl mx-auto space-y-8">
       <div class="flex flex-wrap items-center justify-between gap-4">
         <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-sky-400">asafgv.com • Dossiê Estadual & Arquitetura Técnica</span>
+          <span class="text-xs font-bold uppercase tracking-widest text-sky-400">asafgv.com • Documento Oficial & Funcionalidades</span>
           <h2 class="font-display text-3xl sm:text-4xl font-bold text-white uppercase mt-1">
-            Ofício Estadual para Políticos + Arquitetura Django
+            Ofício Estadual para Políticos e Órgãos Públicos
           </h2>
         </div>
         <div class="no-print flex flex-wrap gap-3">
           <button onclick="exportarAmostraCSV()" class="px-4 py-2.5 rounded-xl btn-friendly-primary font-bold text-xs uppercase">
-            📥 Baixar Planilha Auditável (CSV)
+            📥 Baixar Planilha de Assinaturas
           </button>
           <button onclick="window.print()" class="px-4 py-2.5 rounded-xl bg-[#091b36] hover:bg-slate-800 border border-sky-400/40 text-sky-200 font-bold text-xs uppercase transition-all">
             🖨️ Imprimir / Salvar Ofício em PDF
@@ -1211,30 +1211,30 @@
         </div>
       </div>
 
-      <!-- Resumo da Arquitetura Django (Padrão semferrao.com) -->
+      <!-- Explicação Clara das Funções do Site (Sem Jargão Técnico) -->
       <div class="no-print bg-[#091b36] border border-sky-400/40 rounded-2xl p-6 space-y-4">
         <div class="flex flex-wrap items-center justify-between gap-2">
           <h3 class="font-display text-2xl font-bold text-white uppercase">
-            Arquitetura Backend Projetada: Django + PostgreSQL (`asafgv.com`)
+            Como Funciona o Portal Oficial (`asafgv.com`)
           </h3>
-          <span class="px-3 py-1 rounded bg-[#061326] text-sky-300 font-mono text-xs font-bold">Modelo inspirado no semferrao.com</span>
+          <span class="px-3 py-1 rounded bg-[#061326] text-sky-300 text-xs font-bold">Resumo das Funções do Site</span>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-xs">
           <div class="p-4 rounded-xl bg-[#061326] border border-slate-800 space-y-1.5">
-            <div class="font-bold text-amber-300 uppercase">1. Soft Delete Global</div>
-            <p class="text-slate-300"><code>BaseAuditModel</code> com <code>is_deleted</code>, <code>deleted_at</code> e <code>deleted_by</code>. Nada é perdido fisicamente; o Admin oculta e restaura registros com log de auditoria.</p>
+            <div class="font-bold text-amber-300 uppercase">1. Histórico Seguro</div>
+            <p class="text-slate-300">Nenhuma informação se perde por engano. Quando a diretoria oculta uma mensagem do mural, ela sai da página mas fica arquivada caso precise ser consultada ou restaurada.</p>
           </div>
           <div class="p-4 rounded-xl bg-[#061326] border border-slate-800 space-y-1.5">
-            <div class="font-bold text-emerald-400 uppercase">2. Segurança & LGPD</div>
-            <p class="text-slate-300">CPF indexado por hash <code>SHA-256</code> (unicidade) e criptografado com <code>Fernet/AES-256</code>, exibindo apenas as iniciais no mural público.</p>
+            <div class="font-bold text-emerald-400 uppercase">2. Assinaturas Válidas</div>
+            <p class="text-slate-300">Cada assinatura é validada por CPF único para garantir legitimidade perante os políticos, mantendo apenas as iniciais visíveis no mural aberto do site.</p>
           </div>
           <div class="p-4 rounded-xl bg-[#061326] border border-slate-800 space-y-1.5">
-            <div class="font-bold text-sky-400 uppercase">3. RBAC em 3 Perfis</div>
-            <p class="text-slate-300"><code>CustomUser</code> com roles estritos (<code>ADMIN</code>, <code>GVC</code>, <code>BANHISTA</code>) protegidos por mixins e decorators no servidor.</p>
+            <div class="font-bold text-sky-400 uppercase">3. Três Perfis de Uso</div>
+            <p class="text-slate-300">Acesso organizado para <strong>Banhistas</strong> (avisos de praias e dúvidas), <strong>GVCs</strong> (mural interno, agenda e respostas) e <strong>Admin</strong> (métricas e gestão completa).</p>
           </div>
           <div class="p-4 rounded-xl bg-[#061326] border border-slate-800 space-y-1.5">
-            <div class="font-bold text-amber-300 uppercase">4. Engine de Notícias</div>
-            <p class="text-slate-300">CMS integrado com slugs automáticos, SEO/OpenGraph para WhatsApp/Instagram e visibilidade dupla (Pública ou Interna GVC).</p>
+            <div class="font-bold text-amber-300 uppercase">4. Central de Notícias</div>
+            <p class="text-slate-300">Publicação rápida de notícias abertas para a população (fáceis de compartilhar no WhatsApp e Instagram) ou comunicados internos exclusivos para os guarda-vidas.</p>
           </div>
         </div>
       </div>
